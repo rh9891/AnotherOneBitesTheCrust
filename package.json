@@ -1,0 +1,25 @@
+{
+  "name": "AnotherOneBitesTheBurger",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rh9891/AnotherOneBitesTheBurger.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rh9891/AnotherOneBitesTheBurger/issues"
+  },
+  "homepage": "https://github.com/rh9891/AnotherOneBitesTheBurger#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^5.0.0",
+    "mysql": "^2.18.1"
+  }
+}
