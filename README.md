@@ -9,6 +9,7 @@
 *  [Preview of Another One Bites the Burger](#preview-of-another-one-bites-the-burger)
 *  [Links](#links)
 *  [Installation](#installation)
+*  [Usage](#usage)
 *  [License](#license)
 *  [Contributing](#contributing)
 *  [Questions](#questions)
@@ -50,10 +51,17 @@ $ npm install express-handlebars
 $ npm install mysql
 ~~~
 
-The following dependency - though optional - can also be used as it automatically restarts the node application when file changes in the directory are detected.
+The following dependency - though optional - can also be used as it automatically restarts the node application when file changes in the directory are detected. Saving it as a `devDependency` allows the user to run the application using Nodemon:
 
 ~~~
-$ npm install -g nodemon
+$ npm install nodemon --save-dev
+~~~
+
+## Usage
+
+An example of usage when testing the application using Nodemon:
+~~~
+npm run dev
 ~~~
 
 ## License
