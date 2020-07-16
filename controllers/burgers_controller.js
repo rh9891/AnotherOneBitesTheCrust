@@ -2,10 +2,10 @@
 const express = require("express");
 const router = express.Router();
 
-// Import the model (burger.js) to use its database functions.
+// Imported the model (burger.js) to use its database functions.
 const burger = require("../models/burger.js");
 
-// Get router.
+// GET request that is made to the router.
 router.get("/", function(request, response) {
     burger.selectAll(function(data) {
         // This is the handlebars object.
@@ -15,17 +15,19 @@ router.get("/", function(request, response) {
         console.log(hdbrsObj);
         response.render("index", hdbrsObj);
     });
-// Post router.
+// POST request that is made to the router.
 router.post("/api/burgers", function(request, response) {
+    console.log("Hello World!", request.body)
     burger.insertOne(
-        ["burger_name", "devoured"],
-        [request.body.burger_name, request.body.devoured],
+        ["burger_name"],
+        [request.body.burger_name],
         function(result) {
-            response.json({ id: result.insertId});
+          //  response.json({ id: result.insertId});
+          response.redirect("/")
         }
     );
 });
-// Put router.
+// PUT request that is made to the router.
 router.put("/api/burgers/:id", function(request, response) {
     const condition = "id = " + request.params.id;
     console.log("condition", condition);
@@ -37,7 +39,7 @@ router.put("/api/burgers/:id", function(request, response) {
         }
     });
 });
-// Delete router.
+// DELETE request that is made to the router.
 router.delete("/api/burgers/:id", function(request, response) {
     const condition = "id = " + request.params.id;
     console.log("condition", condition);

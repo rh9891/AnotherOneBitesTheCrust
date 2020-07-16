@@ -1,9 +1,9 @@
 // Created methods that will execute the necessary MySQL commands in the controllers. These methods are needed in order to retrieve and store data in the database.
 
-// Import MySQL connection.
+// Import MySQL connection. This connection allows the MySQL database to be accessed.
 const connection = require("../config/connection.js");
 
-// Create an empty array where the function will loop through the question marks and then return the array to a string.
+// According to the tutorial, this creates an empty array where the function will loop through the question marks - that is needed to input the user information into burger_db - and then return the array to a string.
 function createQmarks(questionNumbers) {
     const arr = [];
     for(var i = 0; i < questionNumbers; i++) {
@@ -12,7 +12,7 @@ function createQmarks(questionNumbers) {
     return arr.toString();
 };
 
-// Creating a (helper) function that will translate the string (from the array) into SQL readable query.
+// Creates a (helper) function that will translate the string (from the array) into MySQL readable query.
 function translateSql(ob) {
     const arr = [];
     for(var key in ob) {
@@ -41,7 +41,7 @@ const orm = {
     insertOne: function(table, cols, vals, cb) {
         const dbQuery = "INSERT INTO " + table + " (" + cols.toString() + ") " + "VALUES (" + createQmarks(vals.length) + ") ";
         console.log(dbQuery);
-        connection.query(dbQuery, function(err, results) {
+        connection.query(dbQuery, vals, function(err, results) {
             if (err) {
                 throw err;
             }

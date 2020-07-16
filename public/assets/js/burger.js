@@ -1,5 +1,5 @@
 $(function() {
-    $(".create-form").on("submit", function(event) {
+    $("#addburger").on("click", function(event) {
         event.preventDefault();
         const newBurger = {
             burger_name: $("#newburger").val().trim(),
@@ -10,7 +10,7 @@ $(function() {
         type: "POST",
         data: newBurger
     }).then(function() {
-        console.log("You have successfully added a new burger.");
+        console.log("You have successfully created a new burger.");
         location.reload();
     });
 });

@@ -1,4 +1,4 @@
-// Set up MySQL connection.
+// Sets up MySQL connection. The connection will be retrieving data from the burger_db database. The port, host, user name, and password are provided.
 const mysql = require("mysql");
 
   connection = mysql.createConnection({
@@ -9,7 +9,7 @@ const mysql = require("mysql");
   database: "burger_db"
 });
 
-// Make connection.
+// Establishes the connection between node and MySQL. Lets the user know that the connection is made by providing an ID number.
 connection.connect(function(err) {
   if (err) {
     console.error("error connecting: " + err.stack);

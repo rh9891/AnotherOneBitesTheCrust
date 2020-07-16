@@ -1,5 +1,8 @@
 #addburger {
   margin-left: 350px;
+  background-color: #31D1B2;
+  color: white;
+  font-weight: bold;
 }
 
 #panel {
@@ -10,6 +13,12 @@
 .subtitle {
   margin-left: 50px;
   text-align: justify;
+}
+
+.input {
+  margin-top: 20px;
+  width: 75%;
+  margin-left: 100px;
 }
 
 #dancingBurger {
