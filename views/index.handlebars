@@ -1,20 +1,20 @@
 {{!-- This file is where the main layout for the website is created. --}}
 
-<section class="hero is-primary is-fullheight is-bold">
+<section class="hero is-success is-fullheight is-bold has-background">
     <div class="hero-body">
-        <div class="container">
+        <div class="container" id="title">
             <h1 class="title">Another One Bites the Burger</h1>
             <h3 class="subtitle">We love 80s music...and so do our burgers.</h3>
         </div>
-        <img src="assets/images/musicBurger.jpg" alt="Hamburger with Headphones Dancing" id="dancingBurger">
+        {{!-- <figure id="burgerImage"> --}}
+            <img class="hero-background" src="assets/images/musicBurger.jpg" alt="Hamburger Dancing with Headphones and Music Player On" id="dancingBurger">
+        {{!-- </figure> --}}
     </div>
 </section>
 
 <section class="hero is-light is-fullheight is-bold">
     <div class="hero-body">
         <div class="container">
-
-
             <div class="columns">
                 <div class="column is-half">
                     <nav class="panel is-primary">
@@ -85,7 +85,8 @@
                                     <div id="createdBurgers"></div>
                                     <div class="field">
                                         <label for="newburger"></label>
-                                        <input class="input" type="text" placeholder="Who Needs a Heart When a Burger Can Be Eaten?" id="newburger">
+                                        <input class="input" type="text"
+                                            placeholder="Who Needs a Heart When a Burger Can Be Eaten?" id="newburger">
                                     </div>
                                     <div class="field">
                                         <div class="buttons">
