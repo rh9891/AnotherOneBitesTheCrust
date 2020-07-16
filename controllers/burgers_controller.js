@@ -41,7 +41,18 @@ router.put("/api/burgers/:id", function(request, response) {
     });
 });
 
+router.deleteOne(condition, function(request, response) {
+    const condition = "id = " + request.params.id;
+    console.log("condition", condition);
 
+    burger.deleteOne(condition, function(result) {
+        if(result, changedRows === 0) {
+            return response.status(404).end();
+        } else {
+            response.status(200).end();
+        }
+    });
+});
 
 // Export routes for server.js to use.
 module.exports = router;
