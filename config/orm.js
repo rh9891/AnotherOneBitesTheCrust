@@ -13,7 +13,7 @@ function createQmarks(questionNumbers) {
 };
 
 // Creating a (helper) function that will translate the string (from the array) into SQL readable query.
-function translateSql(obj) {
+function translateSql(ob) {
     const arr = [];
     for(var key in ob) {
         const value = ob[key];
@@ -22,7 +22,7 @@ function translateSql(obj) {
             if(typeof value === "string" && value.indexOf(" ") >= 0) {
                 value = "'" + value + "'";
             }
-            arr.push(key + "=" + value)
+            arr.push(key + "=" + value);
         }
     }
     return arr.toString();

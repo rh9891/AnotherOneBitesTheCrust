@@ -15,8 +15,6 @@ router.get("/", function(request, response) {
         console.log(hdbrsObj);
         response.render("index", hdbrsObj);
     });
-});
-
 // Post router.
 router.post("/api/burgers", function(request, response) {
     burger.insertOne(
@@ -27,30 +25,30 @@ router.post("/api/burgers", function(request, response) {
         }
     );
 });
-
 // Put router.
 router.put("/api/burgers/:id", function(request, response) {
     const condition = "id = " + request.params.id;
     console.log("condition", condition);
-    burger.updateOne({ devoured: request.body.devoured }, condition, function(result){
-        if(result, changedRows === 0) {
+    burger.updateOne({ devoured: request.body.devoured }, condition, function(result) {
+        if(result.changedRows === 0) {
             return response.status(404).end();
         } else {
             response.status(200).end();
         }
     });
 });
-
-router.deleteOne(condition, function(request, response) {
+// Delete router.
+router.delete("/api/burgers/:id", function(request, response) {
     const condition = "id = " + request.params.id;
     console.log("condition", condition);
 
     burger.deleteOne(condition, function(result) {
-        if(result, changedRows === 0) {
+        if(result.changedRows === 0) {
             return response.status(404).end();
         } else {
             response.status(200).end();
         }
+    });
     });
 });
 
