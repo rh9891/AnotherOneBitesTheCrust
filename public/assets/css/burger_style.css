@@ -1,5 +1,5 @@
-#orderButton {
-  margin-left: 410px;
+#addburger {
+  margin-left: 350px;
 }
 
 #panel {
@@ -17,5 +17,9 @@
   margin-right: 150px;
   max-height: 500px;
   height: 70%;
-  width: auto;
+  width: 400px;
+}
+
+::placeholder {
+  text-align: center;
 }

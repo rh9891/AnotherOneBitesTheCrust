@@ -6,8 +6,7 @@
             <h1 class="title">Another One Bites the Burger</h1>
             <h3 class="subtitle">We love 80s music...and so do our burgers.</h3>
         </div>
-        <img src="assets/images/musicBurger.jpg"
-            alt="Hamburger with Headphones Dancing" id="dancingBurger">
+        <img src="assets/images/musicBurger.jpg" alt="Hamburger with Headphones Dancing" id="dancingBurger">
     </div>
 </section>
 
@@ -29,7 +28,9 @@
                                         {{#each burgers}}
                                         {{#unless devoured}}
                                         <span><strong> {{this.id}} - {{this.burger_name}}</strong></span>
-                                        <button type="button" class="eatburger button is-primary" id="eatbutton" data-id="{{this.id}}" data-newDevoured="{{devour}}"><span><i class="fa fa-utensils"></i></span></button>
+                                        <button type="button" class="eatburger button is-primary" id="eatbutton"
+                                            data-id="{{this.id}}" data-newDevoured="{{devour}}"><span><i
+                                                    class="fa fa-utensils"></i></span></button>
                                         <hr>
                                         {{/unless}}
                                         {{/each}}
@@ -50,11 +51,13 @@
                             <div class="card-content">
                                 <div class="content">
 
-                                     <ul>
+                                    <ul>
                                         {{#each burgers}}
                                         {{#if devoured}}
                                         <span><strong> {{this.id}} - {{this.burger_name}}</strong></span>
-                                        <button type="button" class="trashburger button is-primary" id="trashbutton" data-id="{{this.id}}" data-newDevoured="{{devour}}"><span class="far fa-trash-alt"></span></button>
+                                        <button type="button" class="trashburger button is-primary" id="trashbutton"
+                                            data-id="{{this.id}}" data-newDevoured="{{devour}}"><span
+                                                class="far fa-trash-alt"></span></button>
                                         <hr>
                                         {{/if}}
                                         {{/each}}
@@ -75,19 +78,18 @@
 
                     <div class="column is-10">
                         <nav class="panel is-primary">
-                            <p class="panel-heading" id="panel">What's Love Got to Do, Got to Do with It?<br>Who Needs a
-                                Heart When a Burger Can Be Eaten?</br></p>
+                            <p class="panel-heading" id="panel">What's Love Got to Do, Got to Do With It?</p>
 
                             <div class="block">
                                 <form>
                                     <div id="createdBurgers"></div>
                                     <div class="field">
-                                        <label class="label"></label>
-                                        <input class="input" type="text" placeholder="" id="inputBurger">
+                                        <label for="newburger"></label>
+                                        <input class="input" type="text" placeholder="Who Needs a Heart When a Burger Can Be Eaten?" id="newburger">
                                     </div>
                                     <div class="field">
                                         <div class="buttons">
-                                            <button class="button is-primary" id="addburger">Place Order</button>
+                                            <button type="submit" class="button" id="addburger">Place Order</button>
                                         </div>
                                     </div>
                                 </form>
