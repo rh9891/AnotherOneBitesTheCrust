@@ -39,5 +39,5 @@ $(".trashburger").on("click", function(event) {
         type: "DELETE",
         url: "/api/burgers/" + id
     }).then(location.reload());
-});
+    });
 });
