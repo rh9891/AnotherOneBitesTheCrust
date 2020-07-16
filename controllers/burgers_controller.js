@@ -5,7 +5,7 @@ const router = express.Router();
 // Import the model (burger.js) to use its database functions.
 const burger = require("../models/burger.js");
 
-// Get route.
+// Get router.
 router.get("/", function(request, response) {
     burger.selectAll(function(data) {
         // This is the handlebars object.
@@ -17,7 +17,7 @@ router.get("/", function(request, response) {
     });
 });
 
-// Post route.
+// Post router.
 router.post("/api/burgers", function(request, response) {
     burger.insertOne(
         ["burger_name", "devoured"],
@@ -28,7 +28,18 @@ router.post("/api/burgers", function(request, response) {
     );
 });
 
-
+// Put router.
+router.put("/api/burgers/:id", function(request, response) {
+    const condition = "id = " + request.params.id;
+    console.log("condition", condition);
+    burger.updateOne({ devoured: request.body.devoured }, condition, function(result){
+        if(result, changedRows === 0) {
+            return response.status(404).end();
+        } else {
+            response.status(200).end();
+        }
+    });
+});
 
 
 
