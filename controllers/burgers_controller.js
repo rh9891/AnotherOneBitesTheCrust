@@ -1,9 +1,10 @@
-var express = require("express");
+// This file is the router controller. This is where all the router connections will take place, how the database arrays will be managed, and how the endpoints will be identified.
+const express = require("express");
 
-var router = express.Router();
+const router = express.Router();
 
 // Import the model (burger.js) to use its database functions.
-var cat = require("../models/burger.js");
+var burger = require("../models/burger.js");
 
 
 
