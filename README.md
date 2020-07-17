@@ -42,7 +42,7 @@ THEN the burger will be deleted from the page.
 
 ## Preview of Another One Bites the Burger
 
-[Another One Bites the Burger Homepage](public/assets/images/anotherOneBitesTheBurgerHomepage.png)
+![Another One Bites the Burger Homepage](public/assets/images/anotherOneBitesTheBurgerHomepage.png)
 
 The following animation demonstrates the complete application functionality:
 
