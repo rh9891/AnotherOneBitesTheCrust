@@ -6,9 +6,7 @@
             <h1 class="title">Another One Bites the Burger</h1>
             <h3 class="subtitle">We love 80s music...and so do our burgers.</h3>
         </div>
-        {{!-- <figure id="burgerImage"> --}}
             <img class="hero-background" src="assets/images/musicBurger.jpg" alt="Hamburger Dancing with Headphones and Music Player On" id="dancingBurger">
-        {{!-- </figure> --}}
     </div>
 </section>
 
@@ -17,7 +15,7 @@
         <div class="container">
             <div class="columns">
                 <div class="column is-half">
-                    <nav class="panel is-primary">
+                    <nav class="panel is-bold is-success">
                         <p class="panel-heading" id="panel">Don't You Want Me, Baby?: Order Up!</p>
 
                         <div class="card">
@@ -28,7 +26,7 @@
                                         {{#each burgers}}
                                         {{#unless devoured}}
                                         <span><strong> {{this.id}} - {{this.burger_name}}</strong></span>
-                                        <button type="button" class="eatburger button is-primary" id="eatbutton"
+                                        <button type="button" class="eatburger button is-bold is-success" id="eatbutton"
                                             data-id="{{this.id}}" data-newDevoured="{{devour}}"><span><i
                                                     class="fa fa-utensils"></i></span></button>
                                         <hr>
@@ -44,7 +42,7 @@
 
 
                 <div class="column is-half">
-                    <nav class="panel is-primary">
+                    <nav class="panel is-bold is-success">
                         <p class="panel-heading" id="panel">Hungry Like the Wolf: Devoured Burgers</p>
 
                         <div class="card">
@@ -55,7 +53,7 @@
                                         {{#each burgers}}
                                         {{#if devoured}}
                                         <span><strong> {{this.id}} - {{this.burger_name}}</strong></span>
-                                        <button type="button" class="trashburger button is-primary" id="trashbutton"
+                                        <button type="button" class="trashburger button is-bold is-success" id="trashbutton"
                                             data-id="{{this.id}}" data-newDevoured="{{devour}}"><span
                                                 class="far fa-trash-alt"></span></button>
                                         <hr>
@@ -77,7 +75,7 @@
                     <div class="column is-1"></div>
 
                     <div class="column is-10">
-                        <nav class="panel is-primary">
+                        <nav class="panel is-bold is-success">
                             <p class="panel-heading" id="panel">What's Love Got to Do, Got to Do With It?</p>
 
                             <div class="block">
