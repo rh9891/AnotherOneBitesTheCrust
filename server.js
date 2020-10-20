@@ -4,7 +4,7 @@ const exphbs = require("express-handlebars");
 
 const app = express();
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 1980;
 
 app.use(express.static("public"));
 
@@ -18,5 +18,5 @@ app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
 app.listen(PORT, function () {
-  console.log("Server listening on http://localhost:" + PORT);
+  console.log("Server listening on " + PORT);
 });

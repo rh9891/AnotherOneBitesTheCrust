@@ -1,15 +1,4 @@
 {{!-- This file is where the main layout for the website is created. --}}
-
-<section class="hero is-success is-fullheight is-bold has-background">
-    <div class="hero-body">
-        <div class="container" id="title">
-            <h1 class="title">Another One Bites the Burger</h1>
-            <h3 class="subtitle">We love 80s music...and so do our burgers.</h3>
-        </div>
-            <img class="hero-background" src="assets/images/musicBurger.jpg" alt="Hamburger Dancing with Headphones and Music Player On" id="dancingBurger">
-    </div>
-</section>
-
 <section class="hero is-light is-fullheight is-bold">
     <div class="hero-body">
         <div class="container">
@@ -53,8 +42,8 @@
                                         {{#each burgers}}
                                         {{#if devoured}}
                                         <span><strong> {{this.id}} - {{this.burger_name}}</strong></span>
-                                        <button type="button" class="trashburger button is-bold is-success" id="trashbutton"
-                                            data-id="{{this.id}}" data-newDevoured="{{devour}}"><span
+                                        <button type="button" class="trashburger button is-bold is-success"
+                                            id="trashbutton" data-id="{{this.id}}" data-newDevoured="{{devour}}"><span
                                                 class="far fa-trash-alt"></span></button>
                                         <hr>
                                         {{/if}}

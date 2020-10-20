@@ -6,52 +6,55 @@ const router = express.Router();
 const burger = require("../models/burger.js");
 
 // GET request that is made to the router.
-router.get("/", function(request, response) {
-    burger.selectAll(function(data) {
-        // This is the handlebars object.
-        const hdbrsObj = {
-            burgers: data
-        };
-        console.log(hdbrsObj);
-        response.render("index", hdbrsObj);
+router.get("/", function (request, response) {
+  burger.selectAll(function (data) {
+    // This is the handlebars object.
+    const hdbrsObj = {
+      burgers: data,
+    };
+    console.log(hdbrsObj);
+    response.render("index", hdbrsObj);
+  });
+
+  // POST request that is made to the router.
+  router.post("/api/burgers", function (request, response) {
+    console.log("Hello World!", request.body);
+    burger.insertOne(["burger_name"], [request.body.burger_name], function (
+      result
+    ) {
+      //  response.json({ id: result.insertId});
+      response.redirect("/");
     });
-// POST request that is made to the router.
-router.post("/api/burgers", function(request, response) {
-    console.log("Hello World!", request.body)
-    burger.insertOne(
-        ["burger_name"],
-        [request.body.burger_name],
-        function(result) {
-          //  response.json({ id: result.insertId});
-          response.redirect("/")
-        }
-    );
-});
-// PUT request that is made to the router.
-router.put("/api/burgers/:id", function(request, response) {
+  });
+
+  // PUT request that is made to the router.
+  router.put("/api/burgers/:id", function (request, response) {
     const condition = "id = " + request.params.id;
     console.log("condition", condition);
-    burger.updateOne({ devoured: request.body.devoured }, condition, function(result) {
-        if(result.changedRows === 0) {
-            return response.status(404).end();
-        } else {
-            response.status(200).end();
-        }
+    burger.updateOne({ devoured: request.body.devoured }, condition, function (
+      result
+    ) {
+      if (result.changedRows === 0) {
+        return response.status(404).end();
+      } else {
+        response.status(200).end();
+      }
     });
-});
-// DELETE request that is made to the router.
-router.delete("/api/burgers/:id", function(request, response) {
+  });
+
+  // DELETE request that is made to the router.
+  router.delete("/api/burgers/:id", function (request, response) {
     const condition = "id = " + request.params.id;
     console.log("condition", condition);
 
-    burger.deleteOne(condition, function(result) {
-        if(result.changedRows === 0) {
-            return response.status(404).end();
-        } else {
-            response.status(200).end();
-        }
+    burger.deleteOne(condition, function (result) {
+      if (result.changedRows === 0) {
+        return response.status(404).end();
+      } else {
+        response.status(200).end();
+      }
     });
-    });
+  });
 });
 
 // Export routes for server.js to use.
