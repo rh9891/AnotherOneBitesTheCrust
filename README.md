@@ -1,90 +1,66 @@
-# Another One Bites the Burger
+# Another One Bites the Crust
 
 [![NPM Version Badge](https://badge.fury.io/js/%40angular%2Fcore.svg)](https://badge.fury.io/js/%40angular%2Fcore)
 
 ## Table of Contents
-*  [Description](#description)
-*  [User Story](#user-story)
-*  [Features of the Application](#features-of-the-application)
-*  [Preview of Another One Bites the Burger](#preview-of-another-one-bites-the-burger)
-*  [Links](#links)
-*  [Installation](#installation)
-*  [Usage](#usage)
-*  [Acknowledgments](#acknowledgments)
-*  [Built Using](#built-using)
-*  [License](#license)
-*  [Contributing](#contributing)
-*  [Questions](#questions)
+
+- [Description](#description)
+- [User Story](#user-story)
+- [Features of the Application](#features-of-the-application)
+- [Preview of Another One Bites the Crust](#preview-of-another-one-bites-the-crust)
+- [Links](#links)
+- [Usage](#usage)
+- [Acknowledgments](#acknowledgments)
+- [Built Using](#built-using)
+- [License](#license)
+- [Contributing](#contributing)
+- [Questions](#questions)
 
 ## Description
 
-Another One Bites the Burger is an 80's-themed musically punny burger logger application that allows the user to create a burger of their choice by inputting its name into the application. Once the user has created their burger, it will be displayed onto the page where their order will be available to be picked up. The user may then choose to create additional burgers, "devour" their ordered burger, or delete their devoured burgers. The 80's could arguably be labeled as THE best decade for music, so the inspirations for punny burger names (based on music titles) are endless!
-
-Another One Bites the Burger uses the CRUD operations (**C**reate, **R**ead, **U**pdate, and **D**elete) to build its persistent storage capabilities. These operations allow the application to communicate with the MySQL database and create differing routes (with Express routing) to create, view, update the devoured "status", and delete the burgers from the application. The application also uses Handlebars to generate the HTML (which used the Bulma CSS framework) through nesting expressions.
+Another One Bites the Crust is an 80's-themed musically punny pizza making application that allows the user to create a pizza of their choice by selecting and submitting its ingredients. As the user creates their pizza, it will be displayed onto the page. The 80's could arguably be labeled as THE best decade for music, so the inspirations for punny pizza names (based on music titles) are endless!
 
 ## User Story
-~~~
-AS A user  
+
+```
+AS A user
 I WANT to be able to use a restaurant application
-SO THAT I can create, "devour" (update), and delete burgers.
-~~~
+SO THAT I can create, "devour" (update), and order pizzas.
+```
 
 ## Features of the Application
-~~~
-GIVEN a restaurant application that allows the user to input the names of the burger that they would like to eat  
-WHEN I submit a burger name  
-THEN the application will display the burger on the left side of the page.  
-WHEN I click on the "devour" button (utensils) of any burger that is in the waiting area  
-THEN the burger will move to the right side of the page.  
-WHEN I click on the "delete" button (trash bin) of any devoured burger  
-THEN the burger will be deleted from the page.  
-~~~
 
-## Preview of Another One Bites the Burger
+```
+GIVEN a restaurant application that allows the user to select the ingredients of the pizza that they would like to eat
+WHEN I select an ingredient
+THEN the application will display the chosen ingredients on the left side of the page.
+WHEN I click on the "order" button
+THEN I will have the selected ingredients displayed so that I can verify my choices.
+WHEN I click on the "back" button of my order
+THEN I can review the details of my order.
+```
 
-![Another One Bites the Burger Homepage](public/assets/images/anotherOneBitesTheBurgerHomepage.png)
+## Preview of Another One Bites the Crust
+
+![Another One Bites the Crust Homepage]()
 
 The following animation demonstrates the complete application functionality:
 
-![Another One Bites the Burger Preview](https://github.com/rh9891/AnotherOneBitesTheBurger/blob/master/public/assets/images/anotherOneBitesTheBurgerPreview.gif)
+![Another One Bites the Crust Preview]()
 
 ## Links
 
-1. [Deployed Application](https://another-one-bites-the-burger.herokuapp.com)
+1. [Deployed Application]()
 
-2. [Github Repository](https://github.com/rh9891/AnotherOneBitesTheBurger)
-
-## Installation
-
-The application requires the following dependencies and/or package managers:
-~~~
-$ npm install body-parser
-~~~
-
-~~~
-$ npm install express
-~~~
-
-~~~
-$ npm install express-handlebars
-~~~
-
-~~~
-$ npm install mysql
-~~~
-
-The following dependency - though optional - can also be used as it automatically restarts the node application when file changes in the directory are detected. Saving it as a `devDependency` allows the user to run the application using Nodemon:
-
-~~~
-$ npm install nodemon --save-dev
-~~~
+2. [Github Repository]()
 
 ## Usage
 
 An example of usage when testing the application using Nodemon as it updates the webpage after every change it detects:
-~~~
+
+```
 $ npm run dev
-~~~
+```
 
 ## Acknowledgments
 
@@ -92,12 +68,12 @@ A heartfelt thanks to Github user, David Cox, whose helpful video tutorial I loo
 
 ## Built Using
 
-Listed below are the frameworks and guides that made building this burger application possible:
+Listed below are the frameworks and guides that made building this pizza application possible:
 
-* [Bulma](https://bulma.io/documentation/)
-* [Handlebars](https://handlebarsjs.com/guide/#what-is-handlebars)
-* [Express Routing](https://expressjs.com/en/guide/routing.html)
-* [Model View Controllers (MVC)](https://www.geeksforgeeks.org/mvc-design-pattern/)
+- [Bulma](https://bulma.io/documentation/)
+- [Handlebars](https://handlebarsjs.com/guide/#what-is-handlebars)
+- [Express Routing](https://expressjs.com/en/guide/routing.html)
+- [Model View Controllers (MVC)](https://www.geeksforgeeks.org/mvc-design-pattern/)
 
 ## License
 
