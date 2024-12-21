@@ -1,6 +1,7 @@
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Header from "./components/Header";
+import Customize from "./components/Customize";
 
 function App() {
   return (
@@ -8,7 +9,7 @@ function App() {
       <Header />
       <Router>
         <Routes>
-          <Route element={<h1>Customize</h1>} exact path="/" />
+          <Route element={<Customize />} exact path="/" />
           <Route element={<h1>Checkout</h1>} path="/checkout"></Route>
         </Routes>
       </Router>
