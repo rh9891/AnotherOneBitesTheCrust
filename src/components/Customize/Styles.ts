@@ -13,3 +13,8 @@ export const ImageContainer = styled.div`
   max-width: 500px;
   position: relative;
 `;
+
+export const Image = styled.img`
+  height: 100%;
+  width: 100%;
+`;
