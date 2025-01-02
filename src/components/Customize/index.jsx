@@ -1,3 +1,4 @@
+import Header from "../Header";
 import BBQBase from "../../assets/images/BBQBase.png";
 import Cheese from "../../assets/images/Cheese.png";
 import SunDriedTomatoes from "../../assets/images/SunDriedTomatoes.png";
@@ -15,39 +16,42 @@ export default function Customize({ ingredients, setIngredients }) {
   };
 
   return (
-    <Styled.Wrapper>
-      <Styled.Container>
-        <Styled.ImageContainer>
-          <Styled.Image src={BBQBase} alt="BBQ Pizza Base" />
-          <Styled.Image className="ingredients" src={Cheese} alt="Cheese" />
-          <Styled.Image
-            className="ingredients"
-            src={SunDriedTomatoes}
-            alt="Sun Dried Tomatoes"
+    <>
+      <Header />
+      <Styled.Wrapper>
+        <Styled.Container>
+          <Styled.ImageContainer>
+            <Styled.Image src={BBQBase} alt="BBQ Pizza Base" />
+            <Styled.Image className="ingredients" src={Cheese} alt="Cheese" />
+            <Styled.Image
+              className="ingredients"
+              src={SunDriedTomatoes}
+              alt="Sun Dried Tomatoes"
+            />
+            <Styled.Image
+              className="ingredients"
+              src={Mushrooms}
+              alt="Mushrooms"
+            />
+            <Styled.Image className="ingredients" src={Olives} alt="Olives" />
+            <Styled.Image
+              className="ingredients"
+              src={Pineapple}
+              alt="Pineapple"
+            />
+          </Styled.ImageContainer>
+        </Styled.Container>
+        <Styled.Container>
+          <input
+            type="checkbox"
+            id="pineapple"
+            name="pineapple"
+            value="pineapple"
+            onChange={() => changeIngredients("pineapple")}
           />
-          <Styled.Image
-            className="ingredients"
-            src={Mushrooms}
-            alt="Mushrooms"
-          />
-          <Styled.Image className="ingredients" src={Olives} alt="Olives" />
-          <Styled.Image
-            className="ingredients"
-            src={Pineapple}
-            alt="Pineapple"
-          />
-        </Styled.ImageContainer>
-      </Styled.Container>
-      <Styled.Container>
-        <input
-          type="checkbox"
-          id="pineapple"
-          name="pineapple"
-          value="pineapple"
-          onChange={() => changeIngredients("pineapple")}
-        />
-        <label> Pineapple</label>
-      </Styled.Container>
-    </Styled.Wrapper>
+          <label> Pineapple</label>
+        </Styled.Container>
+      </Styled.Wrapper>
+    </>
   );
 }

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import Header from "./components/Header";
+import Landing from "./components/Landing";
 import Customize from "./components/Customize";
 
 function App() {
@@ -15,9 +15,9 @@ function App() {
 
   return (
     <div>
-      <Header />
       <Router>
         <Routes>
+          <Route element={<Landing />} exact path="/" />
           <Route
             element={
               <Customize
@@ -25,8 +25,7 @@ function App() {
                 setIngredients={setIngredients}
               />
             }
-            exact
-            path="/"
+            path="/customize"
           />
           <Route element={<h1>Checkout</h1>} path="/checkout"></Route>
         </Routes>
