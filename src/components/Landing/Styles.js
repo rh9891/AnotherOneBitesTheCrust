@@ -2,79 +2,160 @@ import styled from "styled-components";
 
 export const Wrapper = styled.div`
   display: flex;
-  backgroud: #bf3c0a;
-  @media (min-width: 768px) {
+  width: 100%;
+  height: 100vh;
+
+  @media only screen and (max-width: 600px) {
     flex-direction: column;
+    margin-bottom: 24px;
   }
 `;
 
 export const LeftPanel = styled.div`
   display: flex;
+  width: 100%;
+  height: 100%;
+`;
+
+export const Image = styled.img`
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
 `;
 
 export const RightPanel = styled.div`
   display: flex;
   flex-direction: column;
+  gap: 24px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
 `;
 
 export const Button = styled.a`
-  font-size: 4rem;
-  display: inline-block;
-  cursor: pointer;
-  text-decoration: none;
-  color: hsl(23, 88.4%, 56.1%);
-  border: hsl(23, 88.4%, 56.1%) 0.125em solid;
-  padding: 0.25em 1em;
-  border-radius: 0.25em;
-
-  text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em currentColor;
-
-  box-shadow: inset 0 0 0.5em 0 hsl(23, 88.4%, 56.1%),
-    0 0 0.5em 0 hsl(23, 88.4%, 56.1%);
-
   position: relative;
+  display: flex;
+  align-items: center;
+  padding: 15px 30px;
+  color: #786789;
+  text-decoration: none;
+  font-family: "Luckiest Guy", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2rem;
+  overflow: hidden;
+  transition: 0.2s;
 
-  ::before {
-    pointer-events: none;
-    content: "";
+  &:visited {
+    color: #786789;
+  }
+
+  &:hover {
+    color: #ffffff;
+    background: #786789;
+    border-radius: 8px;
+    box-shadow: 0 0 50px #786789;
+  }
+
+  a:nth-child(1) {
+    filter: hue-rotate(270deg);
+  }
+  a:nth-child(2) {
+    filter: hue-rotate(110deg);
+  }
+
+  span {
     position: absolute;
-    background: hsl(23, 88.4%, 56.1%);
-    top: 120%;
+    display: block;
+  }
+
+  span:nth-child(1) {
+    top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-
-    transform: perspective(1em) rotateX(40deg) scale(1, 0.35);
-    filter: blur(1em);
-    opacity: 0.7;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #786789);
+    animation: animate1 1s linear infinite;
   }
 
-  ::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
+  @keyframes animate1 {
+    0% {
+      left: -100%;
+    }
+    50%,
+    100% {
+      left: 100%;
+    }
+  }
+
+  span:nth-child(2) {
+    top: -100%;
     right: 0;
-    box-shadow: 0 0 2em 0.5em hsl(23, 88.4%, 56.1%);
-    opacity: 0;
-    background-color: hsl(23, 88.4%, 56.1%);
-    z-index: -1;
-    transition: opacity 100ms linear;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #786789);
+    animation: animate2 1s linear infinite;
+    animation-delay: 0.25s;
   }
 
-  :hover,
-  :focus {
-    color: #000000;
-    text-shadow: none;
+  @keyframes animate2 {
+    0% {
+      top: -100%;
+    }
+    50%,
+    100% {
+      top: 100%;
+    }
   }
 
-  :hover::before,
-  :focus::before {
-    opacity: 1;
+  span:nth-child(3) {
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #786789);
+    animation: animate3 1s linear infinite;
+    animation-delay: 0.5s;
   }
-  :hover::after,
-  :focus::after {
-    opacity: 1;
+
+  @keyframes animate3 {
+    0% {
+      right: -100%;
+    }
+    50%,
+    100% {
+      right: 100%;
+    }
   }
+
+  span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #786789);
+    animation: animate4 1s linear infinite;
+    animation-delay: 0.75s;
+  }
+
+  @keyframes animate4 {
+    0% {
+      bottom: -100%;
+    }
+    50%,
+    100% {
+      bottom: 100%;
+    }
+  }
+`;
+
+export const Title = styled.div`
+  font-family: "Luckiest Guy", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 3rem;
+  color: #ffffff;
+  text-align: center;
+  margin: 16px;
 `;

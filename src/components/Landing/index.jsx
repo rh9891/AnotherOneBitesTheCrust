@@ -5,11 +5,17 @@ export default function Landing() {
   return (
     <Styled.Wrapper>
       <Styled.LeftPanel>
-        <img src={RetroPizza} height="300px" width="300px" />
+        <Styled.Image src={RetroPizza} />
       </Styled.LeftPanel>
       <Styled.RightPanel>
-        <h1>Another One Bites the Crust</h1>
-        <Styled.Button href="/customize">Start Order</Styled.Button>
+        <Styled.Title>Another One Bites the Crust</Styled.Title>
+        <Styled.Button href="/customize">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          Order Up, Dude!
+        </Styled.Button>
       </Styled.RightPanel>
     </Styled.Wrapper>
   );
