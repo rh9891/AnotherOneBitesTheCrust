@@ -8,13 +8,7 @@ import Pineapple from "../../assets/images/Pineapple.png";
 
 import * as Styled from "./Styles";
 
-export default function Customize({ ingredients, setIngredients }) {
-  const changeIngredients = (name) => {
-    let newIngredients = JSON.parse(JSON.stringify(ingredients));
-    newIngredients[name] = !newIngredients[name];
-    setIngredients(newIngredients);
-  };
-
+export default function Customize() {
   return (
     <>
       <Header />
@@ -47,7 +41,7 @@ export default function Customize({ ingredients, setIngredients }) {
             id="pineapple"
             name="pineapple"
             value="pineapple"
-            onChange={() => changeIngredients("pineapple")}
+            onChange={() => console.log("pineapple")}
           />
           <label> Pineapple</label>
         </Styled.Container>
