@@ -17,16 +17,8 @@ function App() {
     <div>
       <Router>
         <Routes>
-          <Route element={<Landing />} exact path="/" />
-          <Route
-            element={
-              <Customize
-                ingredients={ingredients}
-                setIngredients={setIngredients}
-              />
-            }
-            path="/customize"
-          />
+          <Route element={<Landing />} path="/" />
+          <Route element={<Customize />} path="/customize" />
           <Route element={<h1>Checkout</h1>} path="/checkout"></Route>
         </Routes>
       </Router>

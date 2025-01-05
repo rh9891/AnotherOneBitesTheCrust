@@ -10,12 +10,11 @@ import * as Styled from "./Styles";
 
 export default function Customize() {
   return (
-    <>
+    <Styled.Wrapper>
       <Header />
-      <Styled.Wrapper>
+      <Styled.CustomizationContainer>
         <Styled.Container>
           <Styled.ImageContainer>
-            <Styled.Image src={BBQBase} alt="BBQ Pizza Base" />
             <Styled.Image className="ingredients" src={Cheese} alt="Cheese" />
             <Styled.Image
               className="ingredients"
@@ -33,6 +32,11 @@ export default function Customize() {
               src={Pineapple}
               alt="Pineapple"
             />
+            <Styled.Image
+              className="cheese"
+              src={BBQBase}
+              alt="BBQ Pizza Base"
+            />
           </Styled.ImageContainer>
         </Styled.Container>
         <Styled.Container>
@@ -45,7 +49,7 @@ export default function Customize() {
           />
           <label> Pineapple</label>
         </Styled.Container>
-      </Styled.Wrapper>
-    </>
+      </Styled.CustomizationContainer>
+    </Styled.Wrapper>
   );
 }
