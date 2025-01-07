@@ -8,7 +8,7 @@ import Pineapple from "../../assets/images/Pineapple.png";
 
 import * as Styled from "./Styles";
 
-export default function Customize() {
+export default function CustomizeToppings() {
   return (
     <Styled.Wrapper>
       <Header />

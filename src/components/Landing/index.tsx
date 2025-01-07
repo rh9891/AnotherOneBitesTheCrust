@@ -9,7 +9,7 @@ export default function Landing() {
       </Styled.LeftPanel>
       <Styled.RightPanel>
         <Styled.Title>Another One Bites the Crust</Styled.Title>
-        <Styled.Button href="/customize">
+        <Styled.Button href="/customize-sauce">
           <span></span>
           <span></span>
           <span></span>
