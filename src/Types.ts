@@ -1,6 +1,10 @@
+export type SauceType = "tomato-sauce" | "romesco-sauce" | "pesto-sauce" | "creamy-spinach-sauce" | "bbq-sauce";
+
+export type CheeseType = "vegan-cheese" | "ricotta-cheese" | "mozarella-cheese" | "goat-cheese";
+
 export type Ingredients = {
-    sauce: string
-    base: string
+    sauce: SauceType
+    cheese: CheeseType
     toppings: string[]
 }
 
@@ -12,11 +16,11 @@ export type Sauces = {
     bbqSauce: boolean
 }
 
-export type Base = {
+export type Cheese = {
     vegan: boolean
     ricotta: boolean
     mozarella: boolean
-    hummus: boolean
+    goat: boolean
   } 
 
 export type Toppings = {

@@ -1,24 +1,33 @@
 import { Dispatch, SetStateAction } from "react"
 
-import { Ingredients } from "../../Types";
+import { Ingredients, SauceType } from "../../Types";
 import Header from "../Header";
-import BBQBase from "../../assets/images/BBQBase.png";
-import TomatoBase from "../../assets/images/TomatoBase.png";
-import RomescoBase from "../../assets/images/RomescoBase.png";
-import PestoBase from "../../assets/images/PestoBase.png";
-import SpinachBase from "../../assets/images/SpinachBase.png";
+import PizzaBase from "../PizzaBase";
 import * as Styled from "./Styles";
 
-type  CustomizeSauceProps = {
-  sauce: string;
+type CustomizeSauceProps = {
+  sauce: SauceType;
   setIngredients: Dispatch<SetStateAction<Ingredients>>;
 }
+
+type Sauce = {
+  id: SauceType;
+  label: string;
+};
+
+const sauces: Sauce[] = [
+    { id: "tomato-sauce", label: "Tomato Sauce" },
+    { id: "romesco-sauce", label: "Romesco Sauce" },
+    { id: "creamy-spinach-sauce", label: "Creamy Spinach Sauce" },
+    { id: "bbq-sauce", label: "BBQ Sauce" },
+    { id: "pesto-sauce", label: "Pesto Sauce" },
+  ]
 
 export default function CustomizeSauce({
   sauce,
   setIngredients,
 }: CustomizeSauceProps) {
-  const handleSauceChange = (sauce: string) => {
+  const handleSauceChange = (sauce: SauceType) => {
     setIngredients((prev: Ingredients) => ({ ...prev, sauce: sauce }));
   };
 
@@ -28,33 +37,11 @@ export default function CustomizeSauce({
       <Styled.CustomizationContainer>
         <Styled.Container>
           <Styled.ImageContainer>
-          {(sauce === "tomato-sauce" || sauce === "") && (<Styled.Image src={TomatoBase} alt="Tomato Sauce" />)}
-          {sauce === "romesco-sauce" && (<Styled.Image
-              src={RomescoBase}
-              alt="Romesco Sauce"
-            />)}
-{sauce === "pesto-sauce" && (<Styled.Image
-              src={PestoBase}
-              alt="Pesto Sauce"
-            />)}
-          {sauce === "creamy-spinach-sauce" && (<Styled.Image
-              src={SpinachBase}
-              alt="Creamy Spinach Sauce"
-            />)}
-          {sauce === "bbq-sauce" && (<Styled.Image
-              src={BBQBase}
-              alt="BBQ Sauce"
-            />)}
+          <PizzaBase sauce={sauce} />
           </Styled.ImageContainer>
         </Styled.Container>
         <Styled.OptionsContainer>
-        {[
-            { id: "tomato-sauce", label: "Tomato Sauce" },
-            { id: "romesco-sauce", label: "Romesco Sauce" },
-            { id: "creamy-spinach-sauce", label: "Spinach Sauce" },
-            { id: "bbq-sauce", label: "BBQ Sauce" },
-            { id: "pesto-sauce", label: "Pesto Sauce" },
-          ].map((option) => (
+        {sauces.map((option) => (
             <Styled.Option key={option.id}>
               <input
                 type="radio"
