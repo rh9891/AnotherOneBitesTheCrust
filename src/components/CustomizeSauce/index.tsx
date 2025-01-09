@@ -1,4 +1,5 @@
 import { Dispatch, SetStateAction } from "react"
+import { useNavigate } from "react-router-dom";
 
 import { Ingredients, SauceType } from "../../Types";
 import Header from "../Header";
@@ -27,8 +28,14 @@ export default function CustomizeSauce({
   sauce,
   setIngredients,
 }: CustomizeSauceProps) {
+  const navigate = useNavigate()
+
   const handleSauceChange = (sauce: SauceType) => {
     setIngredients((prev: Ingredients) => ({ ...prev, sauce: sauce }));
+  };
+
+  const handleNextPage = () => {
+    navigate("/customize-cheese");
   };
 
   return (
@@ -54,6 +61,7 @@ export default function CustomizeSauce({
               <label htmlFor={option.id}>{option.label}</label>
             </Styled.Option>
           ))}
+                    <Styled.Button onClick={handleNextPage}>Customize Cheese</Styled.Button>
         </Styled.OptionsContainer>
       </Styled.CustomizationContainer>
     </Styled.Wrapper>

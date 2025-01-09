@@ -1,4 +1,5 @@
 import { Dispatch, SetStateAction } from "react"
+import { useNavigate } from "react-router-dom";
 
 import { Ingredients, CheeseType } from "../../Types";
 import Header from "../Header";
@@ -24,8 +25,14 @@ const cheeses: Cheese[] = [
   ]
 
 export default function CustomizeBase({ingredients, setIngredients}: CustomizeBaseProps) {
+  const navigate = useNavigate()
+
   const handleCheeseChange = (cheese: CheeseType) => {
     setIngredients((prev: Ingredients) => ({ ...prev, cheese: cheese }));
+  };
+
+  const handleNextPage = () => {
+    navigate("/customize-toppings");
   };
 
   return (
@@ -35,7 +42,7 @@ export default function CustomizeBase({ingredients, setIngredients}: CustomizeBa
         <Styled.Container>
           <Styled.ImageContainer>
           <PizzaCheese cheese={ingredients.cheese} />
-            <PizzaBase sauce={ingredients.sauce} />
+          <PizzaBase sauce={ingredients.sauce} />
           </Styled.ImageContainer>
         </Styled.Container>
         <Styled.Container>
@@ -52,6 +59,7 @@ export default function CustomizeBase({ingredients, setIngredients}: CustomizeBa
                         <label htmlFor={option.id}>{option.label}</label>
                       </Styled.Option>
                     ))}
+                     <Styled.Button onClick={handleNextPage}>Customize Toppings</Styled.Button>
         </Styled.Container>
       </Styled.CustomizationContainer>
     </Styled.Wrapper>

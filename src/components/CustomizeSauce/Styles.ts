@@ -39,3 +39,27 @@ export const Image = styled.img`
   height: 100%;
   width: 100%;
 `;
+
+export const Button = styled.button`
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+      color: #ffffff;
+    background: #786789;
+    border-radius: 8px;
+    border: none;
+  text-decoration: none;
+  font-size: 1rem;
+  overflow: hidden;
+  transition: 0.2s;
+  width: 200px;
+
+  &:hover {
+color: #786789;    
+background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 50px #786789;
+  }
+`;

@@ -1,8 +1,8 @@
 import { CheeseType } from '../../Types';
-import VeganCheese from '../../assets/images/TomatoBase.png';
-import RicottaCheese from '../../assets/images/RomescoBase.png';
-import MozarellaCheese from '../../assets/images/PestoBase.png';
-import GoatCheese from '../../assets/images/SpinachBase.png';
+import VeganCheese from '../../assets/images/VeganCheese.png';
+import RicottaCheese from '../../assets/images/RicottaCheese.png';
+import MozarellaCheese from '../../assets/images/MozarellaCheese.png';
+import GoatCheese from '../../assets/images/GoatCheese.png';
 import * as Styled from './Styles';
 
 type PizzaCheeseProps = {
