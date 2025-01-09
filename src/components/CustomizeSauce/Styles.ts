@@ -21,9 +21,9 @@ export const OptionsContainer = styled.div`
 `;
 
 export const Option = styled.div`
-display: flex;
-gap: 8;
-`
+  display: flex;
+  gap: 8;
+`;
 
 export const ImageContainer = styled.div`
   max-height: 500px;
@@ -46,10 +46,10 @@ export const Button = styled.button`
   align-items: center;
   justify-content: center;
   padding: 8px;
-      color: #ffffff;
-    background: #786789;
-    border-radius: 8px;
-    border: none;
+  color: #ffffff;
+  background: #786789;
+  border-radius: 8px;
+  border: none;
   text-decoration: none;
   font-size: 1rem;
   overflow: hidden;
@@ -57,8 +57,8 @@ export const Button = styled.button`
   width: 200px;
 
   &:hover {
-color: #786789;    
-background: #ffffff;
+    color: #786789;
+    background: #ffffff;
     border-radius: 8px;
     box-shadow: 0 0 50px #786789;
   }

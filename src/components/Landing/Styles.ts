@@ -61,7 +61,7 @@ export const Button = styled.a`
   a:nth-child(1) {
     filter: hue-rotate(270deg);
   }
-    
+
   a:nth-child(2) {
     filter: hue-rotate(110deg);
   }

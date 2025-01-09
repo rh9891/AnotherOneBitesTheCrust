@@ -19,9 +19,28 @@ function App() {
       <Router>
         <Routes>
           <Route element={<Landing />} path="/" />
-          <Route element={<CustomizeSauce sauce={ingredients.sauce} setIngredients={setIngredients} />} path="/customize-sauce" />
-          <Route element={<CustomizeBase ingredients={ingredients} setIngredients={setIngredients} />} path="/customize-cheese" />
-          <Route element={<CustomizeToppings />} path="/customize-additional-toppings" />
+          <Route
+            element={
+              <CustomizeSauce
+                sauce={ingredients.sauce}
+                setIngredients={setIngredients}
+              />
+            }
+            path="/customize-sauce"
+          />
+          <Route
+            element={
+              <CustomizeBase
+                ingredients={ingredients}
+                setIngredients={setIngredients}
+              />
+            }
+            path="/customize-cheese"
+          />
+          <Route
+            element={<CustomizeToppings />}
+            path="/customize-additional-toppings"
+          />
           <Route element={<h1>Checkout</h1>} path="/checkout"></Route>
         </Routes>
       </Router>

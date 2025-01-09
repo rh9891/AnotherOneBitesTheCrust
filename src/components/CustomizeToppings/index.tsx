@@ -15,7 +15,11 @@ export default function CustomizeToppings() {
       <Styled.CustomizationContainer>
         <Styled.Container>
           <Styled.ImageContainer>
-            <Styled.Image className="ingredients" src={MozarellaCheese} alt="Mozarella Cheese" />
+            <Styled.Image
+              className="ingredients"
+              src={MozarellaCheese}
+              alt="Mozarella Cheese"
+            />
             <Styled.Image
               className="ingredients"
               src={SunDriedTomatoes}

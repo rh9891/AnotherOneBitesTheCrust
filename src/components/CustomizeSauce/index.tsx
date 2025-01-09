@@ -1,4 +1,4 @@
-import { Dispatch, SetStateAction } from "react"
+import { Dispatch, SetStateAction } from "react";
 import { useNavigate } from "react-router-dom";
 
 import { Ingredients, SauceType } from "../../Types";
@@ -9,7 +9,7 @@ import * as Styled from "./Styles";
 type CustomizeSauceProps = {
   sauce: SauceType;
   setIngredients: Dispatch<SetStateAction<Ingredients>>;
-}
+};
 
 type Sauce = {
   id: SauceType;
@@ -17,18 +17,18 @@ type Sauce = {
 };
 
 const sauces: Sauce[] = [
-    { id: "tomato-sauce", label: "Tomato Sauce" },
-    { id: "romesco-sauce", label: "Romesco Sauce" },
-    { id: "creamy-spinach-sauce", label: "Creamy Spinach Sauce" },
-    { id: "bbq-sauce", label: "BBQ Sauce" },
-    { id: "pesto-sauce", label: "Pesto Sauce" },
-  ]
+  { id: "tomato-sauce", label: "Tomato Sauce" },
+  { id: "romesco-sauce", label: "Romesco Sauce" },
+  { id: "creamy-spinach-sauce", label: "Creamy Spinach Sauce" },
+  { id: "bbq-sauce", label: "BBQ Sauce" },
+  { id: "pesto-sauce", label: "Pesto Sauce" },
+];
 
 export default function CustomizeSauce({
   sauce,
   setIngredients,
 }: CustomizeSauceProps) {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const handleSauceChange = (sauce: SauceType) => {
     setIngredients((prev: Ingredients) => ({ ...prev, sauce: sauce }));
@@ -44,11 +44,11 @@ export default function CustomizeSauce({
       <Styled.CustomizationContainer>
         <Styled.Container>
           <Styled.ImageContainer>
-          <PizzaBase sauce={sauce} />
+            <PizzaBase sauce={sauce} />
           </Styled.ImageContainer>
         </Styled.Container>
         <Styled.OptionsContainer>
-        {sauces.map((option) => (
+          {sauces.map((option) => (
             <Styled.Option key={option.id}>
               <input
                 type="radio"
@@ -61,7 +61,9 @@ export default function CustomizeSauce({
               <label htmlFor={option.id}>{option.label}</label>
             </Styled.Option>
           ))}
-                    <Styled.Button onClick={handleNextPage}>Customize Cheese</Styled.Button>
+          <Styled.Button onClick={handleNextPage}>
+            Customize Cheese
+          </Styled.Button>
         </Styled.OptionsContainer>
       </Styled.CustomizationContainer>
     </Styled.Wrapper>
