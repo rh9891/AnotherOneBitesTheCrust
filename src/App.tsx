@@ -7,7 +7,7 @@ import CustomizeSauce from "./components/CustomizeSauce";
 import CustomizeBase from "./components/CustomizeBase";
 import CustomizeToppings from "./components/CustomizeToppings";
 
-function App() {
+export default function App() {
   const [ingredients, setIngredients] = useState<Ingredients>({
     sauce: "tomato-sauce",
     cheese: "mozarella-cheese",
@@ -38,7 +38,7 @@ function App() {
             path="/customize-cheese"
           />
           <Route
-            element={<CustomizeToppings />}
+            element={<CustomizeToppings ingredients={ingredients} setIngredients={setIngredients} />}
             path="/customize-additional-toppings"
           />
           <Route element={<h1>Checkout</h1>} path="/checkout"></Route>
@@ -47,5 +47,3 @@ function App() {
     </div>
   );
 }
-
-export default App;

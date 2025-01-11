@@ -16,29 +16,3 @@ export type Ingredients = {
   cheese: CheeseType;
   toppings: string[];
 };
-
-export type Sauces = {
-  tomatoSauce: boolean;
-  spinachauce: boolean;
-  romescoSauce: boolean;
-  pestoSauce: boolean;
-  bbqSauce: boolean;
-};
-
-export type Cheese = {
-  vegan: boolean;
-  ricotta: boolean;
-  mozarella: boolean;
-  goat: boolean;
-};
-
-export type Toppings = {
-  basil: boolean;
-  tomatoes: boolean;
-  mushrooms: boolean;
-  pineapple: boolean;
-  sunDriedTomatoes: boolean;
-  springOnions: boolean;
-  shrimp: boolean;
-  olives: boolean;
-};

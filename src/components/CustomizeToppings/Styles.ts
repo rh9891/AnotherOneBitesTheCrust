@@ -28,3 +28,8 @@ export const Image = styled.img`
   height: 100%;
   width: 100%;
 `;
+
+export const Option = styled.div`
+  display: flex;
+  gap: 8;
+`;
