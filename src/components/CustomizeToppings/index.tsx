@@ -10,7 +10,6 @@ import Olives from "../../assets/images/Olives.png";
 import Pineapple from "../../assets/images/Pineapple.png";
 import Prawns from "../../assets/images/Prawns.png";
 import SpringOnions from "../../assets/images/SpringOnions.png";
-import SunDriedTomatoes from "../../assets/images/SunDriedTomatoes.png";
 import Tomato from "../../assets/images/Tomato.png";
 import * as Styled from "./Styles";
 
