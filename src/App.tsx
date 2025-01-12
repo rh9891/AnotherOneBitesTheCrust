@@ -39,7 +39,7 @@ export default function App() {
           />
           <Route
             element={<CustomizeToppings ingredients={ingredients} setIngredients={setIngredients} />}
-            path="/customize-toppings"
+            path="/customize-additional-toppings"
           />
           <Route element={<h1>Checkout</h1>} path="/checkout"></Route>
         </Routes>

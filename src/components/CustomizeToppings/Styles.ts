@@ -50,6 +50,25 @@ export const Image = styled.img`
   width: 100%;
 `;
 
+export const OptionsContainer = styled.div`
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+`;
+
+export const DirectionContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+`;
+
+export const Title = styled.div`
+    font-size: 1.25rem;
+`
+
+export const Description = styled.div``
+
 export const Option = styled.div`
   display: flex;
   gap: 8;

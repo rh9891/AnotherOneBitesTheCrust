@@ -39,7 +39,7 @@ export default function CustomizeBase({
   };
 
   const handleNextPage = () => {
-    navigate("/customize-toppings");
+    navigate("/customize-additional-toppings");
   };
 
   return (
@@ -53,19 +53,25 @@ export default function CustomizeBase({
           </Styled.ImageContainer>
         </Styled.Container>
         <Styled.OptionsContainer>
-          {cheeses.map((option) => (
-            <Styled.Option key={option.id}>
-              <input
-                type="radio"
-                id={option.id}
-                name="cheese"
-                value={option.id}
-                checked={ingredients.cheese === option.id}
-                onChange={() => handleCheeseChange(option.id)}
-              />
-              <label htmlFor={option.id}>{option.label}</label>
-            </Styled.Option>
-          ))}
+          <Styled.DirectionContainer>
+            <Styled.Title>Choose Your Cheesy Anthem</Styled.Title>
+            <Styled.Description>Every great pizza deserves a legendary cheese. Pick your favorite hit and make your pizza sing!</Styled.Description>
+          </Styled.DirectionContainer>
+          <div>
+            {cheeses.map((option) => (
+              <Styled.Option key={option.id}>
+                <input
+                  type="radio"
+                  id={option.id}
+                  name="cheese"
+                  value={option.id}
+                  checked={ingredients.cheese === option.id}
+                  onChange={() => handleCheeseChange(option.id)}
+                />
+                <label htmlFor={option.id}>{option.label}</label>
+              </Styled.Option>
+            ))}
+          </div>
           <Styled.ButtonContainer>
             <Styled.Button className="button" onClick={handleGoBack}>
               Go Back
