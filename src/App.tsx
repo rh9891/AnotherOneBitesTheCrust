@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Ingredients } from "./Types";
 import Landing from "./components/Landing";
 import CustomizeSauce from "./components/CustomizeSauce";
-import CustomizeBase from "./components/CustomizeBase";
+import CustomizeCheese from "./components/CustomizeCheese";
 import CustomizeToppings from "./components/CustomizeToppings";
 
 export default function App() {
@@ -30,7 +30,7 @@ export default function App() {
           />
           <Route
             element={
-              <CustomizeBase
+              <CustomizeCheese
                 ingredients={ingredients}
                 setIngredients={setIngredients}
               />

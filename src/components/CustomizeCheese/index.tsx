@@ -7,7 +7,7 @@ import PizzaBase from "../PizzaBase";
 import PizzaCheese from "../PizzaCheese";
 import * as Styled from "./Styles";
 
-type CustomizeBaseProps = {
+type CustomizeCheeseProps = {
   ingredients: Ingredients;
   setIngredients: Dispatch<SetStateAction<Ingredients>>;
 };
@@ -24,10 +24,10 @@ const cheeses: Cheese[] = [
   { id: "goat-cheese", label: "Sweet Dreams Are Made of Goat Cheese" },
 ];
 
-export default function CustomizeBase({
+export default function CustomizeCheese({
   ingredients,
   setIngredients,
-}: CustomizeBaseProps) {
+}: CustomizeCheeseProps) {
   const navigate = useNavigate();
 
   const handleCheeseChange = (cheese: CheeseType) => {

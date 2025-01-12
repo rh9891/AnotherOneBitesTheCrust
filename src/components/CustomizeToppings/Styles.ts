@@ -29,19 +29,23 @@ export const ImageContainer = styled.div`
     top: 50px;
     height: 80%;
     width: 80%;
+    margin-top: -100px;
   }
 
-  .chicken, .ham {
+  .chicken,
+  .ham {
     position: absolute;
     right: 70px;
     top: 70px;
     height: 70%;
     width: 70%;
+    margin-top: -100px;
   }
 
   .pineapple,
   .olives {
     position: absolute;
+    margin-top: -100px;
   }
 `;
 
@@ -64,10 +68,10 @@ export const DirectionContainer = styled.div`
 `;
 
 export const Title = styled.div`
-    font-size: 1.25rem;
-`
+  font-size: 1.25rem;
+`;
 
-export const Description = styled.div``
+export const Description = styled.div``;
 
 export const Option = styled.div`
   display: flex;

@@ -1,5 +1,6 @@
 import { Dispatch, SetStateAction } from "react";
 import { useNavigate } from "react-router-dom";
+import { AnimatePresence, motion } from "framer-motion";
 
 import { Ingredients } from "../../Types";
 import Header from "../Header";
@@ -101,17 +102,27 @@ export default function CustomizeToppings({
         <Styled.Container>
           <Styled.ImageContainer>
             <PizzaCheese cheese={ingredients.cheese} />
-            {ingredients.toppings.map((topping) => {
-              const toppingData = toppings.find((t) => t.id === topping);
-              return (
-                <Styled.Image
-                  key={toppingData?.id}
-                  className={toppingData?.className ?? "toppings"}
-                  src={toppingData?.image}
-                  alt={toppingData?.label}
-                />
-              );
-            })}
+            <AnimatePresence>
+              {ingredients.toppings.map((topping) => {
+                const toppingData = toppings.find((t) => t.id === topping);
+                return (
+                  <motion.div
+                    key={toppingData?.id}
+                    initial={{ opacity: 0 }}
+                    animate={{ y: 100, opacity: 1 }}
+                    exit={{ y: -100, opacity: 0 }}
+                    transition={{ duration: 1 }}
+                    className={toppingData?.className ?? "toppings"}
+                  >
+                    <Styled.Image
+                      key={toppingData?.id}
+                      src={toppingData?.image}
+                      alt={toppingData?.label}
+                    />
+                  </motion.div>
+                );
+              })}
+            </AnimatePresence>
             <PizzaBase sauce={ingredients.sauce} />
           </Styled.ImageContainer>
         </Styled.Container>

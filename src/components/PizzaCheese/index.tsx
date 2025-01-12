@@ -1,3 +1,5 @@
+import { motion, AnimatePresence } from "framer-motion";
+
 import { CheeseType } from "../../Types";
 import VeganCheese from "../../assets/images/VeganCheese.png";
 import RicottaCheese from "../../assets/images/RicottaCheese.png";
@@ -22,10 +24,17 @@ export default function PizzaCheese({ cheese }: PizzaCheeseProps) {
   if (!selectedCheese) return null;
 
   return (
-    <Styled.Image
-      className="ingredients"
-      src={selectedCheese.src}
-      alt={selectedCheese.alt}
-    />
+    <AnimatePresence>
+      <motion.div
+        key={cheese}
+        initial={{ scale: 0 }}
+        animate={{ scale: 1 }}
+        exit={{ scale: 0 }}
+        transition={{ duration: 0.3 }}
+        className="ingredients"
+      >
+        <Styled.Image src={selectedCheese.src} alt={selectedCheese.alt} />
+      </motion.div>
+    </AnimatePresence>
   );
 }
