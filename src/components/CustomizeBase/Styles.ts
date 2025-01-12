@@ -31,9 +31,20 @@ export const Image = styled.img`
   width: 100%;
 `;
 
+export const OptionsContainer = styled.div`
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+`;
+
 export const Option = styled.div`
   display: flex;
   gap: 8;
+`;
+
+export const ButtonContainer = styled.div`
+  display: flex;
+  gap: 16px;
 `;
 
 export const Button = styled.button`
@@ -50,7 +61,8 @@ export const Button = styled.button`
   font-size: 1rem;
   overflow: hidden;
   transition: 0.2s;
-  width: 200px;
+  max-width: 200px;
+  cursor: pointer;
 
   &:hover {
     color: #786789;

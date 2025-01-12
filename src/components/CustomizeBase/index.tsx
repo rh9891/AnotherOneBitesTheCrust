@@ -18,10 +18,10 @@ type Cheese = {
 };
 
 const cheeses: Cheese[] = [
-  { id: "vegan-cheese", label: "Vegan Cheese" },
-  { id: "ricotta-cheese", label: "Ricotta Cheese" },
-  { id: "mozarella-cheese", label: "Mozarella Cheese" },
-  { id: "goat-cheese", label: "Goat Cheese" },
+  { id: "vegan-cheese", label: "Like A Vegan" },
+  { id: "ricotta-cheese", label: "Ricotta Be Startin' Something" },
+  { id: "mozarella-cheese", label: "I Wanna Mozzarella Somebody" },
+  { id: "goat-cheese", label: "Sweet Dreams Are Made of Goat Cheese" },
 ];
 
 export default function CustomizeBase({
@@ -32,6 +32,10 @@ export default function CustomizeBase({
 
   const handleCheeseChange = (cheese: CheeseType) => {
     setIngredients((prev: Ingredients) => ({ ...prev, cheese: cheese }));
+  };
+
+  const handleGoBack = () => {
+    navigate("/customize-sauce");
   };
 
   const handleNextPage = () => {
@@ -48,7 +52,7 @@ export default function CustomizeBase({
             <PizzaBase sauce={ingredients.sauce} />
           </Styled.ImageContainer>
         </Styled.Container>
-        <Styled.Container>
+        <Styled.OptionsContainer>
           {cheeses.map((option) => (
             <Styled.Option key={option.id}>
               <input
@@ -62,10 +66,15 @@ export default function CustomizeBase({
               <label htmlFor={option.id}>{option.label}</label>
             </Styled.Option>
           ))}
-          <Styled.Button onClick={handleNextPage}>
-            Customize Toppings
-          </Styled.Button>
-        </Styled.Container>
+          <Styled.ButtonContainer>
+            <Styled.Button className="button" onClick={handleGoBack}>
+              Go Back
+            </Styled.Button>
+            <Styled.Button className="button" onClick={handleNextPage}>
+              Customize Toppings
+            </Styled.Button>
+          </Styled.ButtonContainer>
+        </Styled.OptionsContainer>
       </Styled.CustomizationContainer>
     </Styled.Wrapper>
   );

@@ -34,6 +34,10 @@ export default function CustomizeSauce({
     setIngredients((prev: Ingredients) => ({ ...prev, sauce: sauce }));
   };
 
+  const handleGoBack = () => {
+    navigate("/");
+  };
+
   const handleNextPage = () => {
     navigate("/customize-cheese");
   };
@@ -61,9 +65,14 @@ export default function CustomizeSauce({
               <label htmlFor={option.id}>{option.label}</label>
             </Styled.Option>
           ))}
-          <Styled.Button onClick={handleNextPage}>
+          <Styled.ButtonContainer>
+          <Styled.Button className="button" onClick={handleGoBack}>
+            Go Back
+          </Styled.Button>
+          <Styled.Button className="button" onClick={handleNextPage}>
             Customize Cheese
           </Styled.Button>
+          </Styled.ButtonContainer>
         </Styled.OptionsContainer>
       </Styled.CustomizationContainer>
     </Styled.Wrapper>

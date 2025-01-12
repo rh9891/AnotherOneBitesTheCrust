@@ -4,13 +4,18 @@ import { Ingredients } from "../../Types";
 import Header from "../Header";
 import PizzaCheese from "../PizzaCheese";
 import PizzaBase from "../PizzaBase";
-import Basil from "../../assets/images/Basil.png";
+import Pepperoni from "../../assets/images/Pepperoni.png";
+import Chicken from "../../assets/images/Chicken.png";
+import Ham from "../../assets/images/Ham.png";
+import Shrimp from "../../assets/images/Shrimp.png";
+import Peppers from "../../assets/images/Peppers.png";
+import Tomatoes from "../../assets/images/Tomatoes.png";
+import SpringOnions from "../../assets/images/SpringOnions.png";
 import Mushrooms from "../../assets/images/Mushrooms.png";
 import Olives from "../../assets/images/Olives.png";
+import Onions from "../../assets/images/Onions.png";
 import Pineapple from "../../assets/images/Pineapple.png";
-import Prawns from "../../assets/images/Prawns.png";
-import SpringOnions from "../../assets/images/SpringOnions.png";
-import Tomato from "../../assets/images/Tomato.png";
+import ShreddedParmesanCheese from "../../assets/images/ShreddedParmesanCheese.png";
 import * as Styled from "./Styles";
 
 type CustomizeToppingsProps = {
@@ -22,16 +27,31 @@ type Topping = {
   id: string;
   label: string;
   image: string;
+  className?: string;
 };
 
 const toppings: Topping[] = [
-  { id: "prawns", label: "Prawns", image: Prawns },
-  { id: "tomato", label: "Tomato", image: Tomato },
-  { id: "spring-onions", label: "Spring Onions", image: SpringOnions },
-  { id: "basil", label: "Basil", image: Basil },
-  { id: "mushrooms", label: "Mushrooms", image: Mushrooms },
-  { id: "olives", label: "Olives", image: Olives },
-  { id: "pineapple", label: "Pineapple", image: Pineapple },
+  { id: "pepperoni", label: "Papa Don't Pepperoni", image: Pepperoni },
+  { id: "chicken", label: "Pour Some Chicken on Me", image: Chicken, className: "chicken" },
+  { id: "ham", label: "Ham After Time", image: Ham, className: "ham" },
+  { id: "shrimp", label: "Shrimp Up the Volume", image: Shrimp },
+  { id: "peppers", label: "Sweet Peppers O' Mine", image: Peppers },
+  { id: "tomatoes", label: "Love Is a Tomato Field", image: Tomatoes },
+  { id: "spring-onions", label: "Where the Spring Onions Have No Name", image: SpringOnions },
+  { id: "mushrooms", label: "With or Without Shrooms", image: Mushrooms },
+  { id: "olives", label: "Addicted to Olive", image: Olives, className: "olives" },
+  { id: "onions", label: "Livin' Onion Prayer", image: Onions },
+  {
+    id: "pineapple",
+    label: "Pineapple Fields Forever",
+    image: Pineapple,
+    className: "pineapple",
+  },
+  {
+    id: "shredded-parmesan-cheese",
+    label: "Parma Chameleon",
+    image: ShreddedParmesanCheese,
+  },
 ];
 
 export default function CustomizeToppings({
@@ -55,13 +75,13 @@ export default function CustomizeToppings({
       <Styled.CustomizationContainer>
         <Styled.Container>
           <Styled.ImageContainer>
-          <PizzaCheese cheese={ingredients.cheese} />
+            <PizzaCheese cheese={ingredients.cheese} />
             {ingredients.toppings.map((topping) => {
               const toppingData = toppings.find((t) => t.id === topping);
               return (
                 <Styled.Image
                   key={toppingData?.id}
-                  className="ingredients"
+                  className={toppingData?.className ?? "toppings"}
                   src={toppingData?.image}
                   alt={toppingData?.label}
                 />

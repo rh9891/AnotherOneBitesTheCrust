@@ -22,6 +22,27 @@ export const ImageContainer = styled.div`
   .ingredients {
     position: absolute;
   }
+
+  .toppings {
+    position: absolute;
+    right: 50px;
+    top: 50px;
+    height: 80%;
+    width: 80%;
+  }
+
+  .chicken, .ham {
+    position: absolute;
+    right: 70px;
+    top: 70px;
+    height: 70%;
+    width: 70%;
+  }
+
+  .pineapple,
+  .olives {
+    position: absolute;
+  }
 `;
 
 export const Image = styled.img`
@@ -32,4 +53,35 @@ export const Image = styled.img`
 export const Option = styled.div`
   display: flex;
   gap: 8;
+`;
+
+export const ButtonContainer = styled.div`
+  display: flex;
+  gap: 16px;
+  align-items: center;
+`;
+
+export const Button = styled.a`
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  color: #ffffff;
+  background: #786789;
+  border-radius: 8px;
+  border: none;
+  text-decoration: none;
+  font-size: 1rem;
+  overflow: hidden;
+  transition: 0.2s;
+  max-width: 200px;
+  cursor: pointer;
+
+  &:hover {
+    color: #786789;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 50px #786789;
+  }
 `;

@@ -40,7 +40,13 @@ export const Image = styled.img`
   width: 100%;
 `;
 
-export const Button = styled.button`
+export const ButtonContainer = styled.div`
+  display: flex;
+  gap: 16px;
+  align-items: center;
+`;
+
+export const Button = styled.a`
   position: relative;
   display: flex;
   align-items: center;
@@ -54,7 +60,8 @@ export const Button = styled.button`
   font-size: 1rem;
   overflow: hidden;
   transition: 0.2s;
-  width: 200px;
+  max-width: 200px;
+  cursor: pointer;
 
   &:hover {
     color: #786789;
