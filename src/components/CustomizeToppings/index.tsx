@@ -5,7 +5,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Ingredients } from "../../Types";
 import Header from "../Header";
 import PizzaCheese from "../PizzaCheese";
-import PizzaBase from "../PizzaBase";
+import PizzaSauce from "../PizzaSauce";
 import Pepperoni from "../../assets/images/Pepperoni.png";
 import Chicken from "../../assets/images/Chicken.png";
 import Ham from "../../assets/images/Ham.png";
@@ -123,7 +123,7 @@ export default function CustomizeToppings({
                 );
               })}
             </AnimatePresence>
-            <PizzaBase sauce={ingredients.sauce} />
+            <PizzaSauce sauce={ingredients.sauce} />
           </Styled.ImageContainer>
         </Styled.Container>
         <Styled.OptionsContainer>

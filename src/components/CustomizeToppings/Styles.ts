@@ -8,10 +8,24 @@ export const Wrapper = styled.div`
 
 export const CustomizationContainer = styled.div`
   display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 24px;
+  margin: 32px 16px;
+
+  @media only screen and (max-width: 765px) {
+    flex-direction: column;
+    justify-content: center;
+  }
 `;
 
 export const Container = styled.div`
-  flex: 1;
+  display: flex;
+  min-width: 500px;
+
+  @media only screen and (max-width: 765px) {
+    min-width: 0;
+  }
 `;
 
 export const ImageContainer = styled.div`
@@ -47,6 +61,29 @@ export const ImageContainer = styled.div`
     position: absolute;
     margin-top: -100px;
   }
+
+  @media only screen and (max-width: 765px) {
+    max-width: 375px;
+
+    .toppings {
+    position: absolute;
+    right: 40px;
+    top: 40px;
+    height: 80%;
+    width: 80%;
+    margin-top: -100px;
+  }
+
+  .chicken,
+  .ham {
+    position: absolute;
+    right: 60px;
+    top: 60px;
+    height: 70%;
+    width: 70%;
+    margin-top: -100px;
+  }
+  }
 `;
 
 export const Image = styled.img`
@@ -55,10 +92,10 @@ export const Image = styled.img`
 `;
 
 export const OptionsContainer = styled.div`
-  flex: 1;
   display: flex;
   flex-direction: column;
   gap: 16px;
+  max-width: 500px;
 `;
 
 export const DirectionContainer = styled.div`
@@ -68,7 +105,10 @@ export const DirectionContainer = styled.div`
 `;
 
 export const Title = styled.div`
-  font-size: 1.25rem;
+  font-family: "Luckiest Guy", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2rem;
 `;
 
 export const Description = styled.div``;
@@ -82,6 +122,10 @@ export const ButtonContainer = styled.div`
   display: flex;
   gap: 16px;
   align-items: center;
+
+   @media only screen and (max-width: 765px) {
+    justify-content: center;
+  }
 `;
 
 export const Button = styled.a`

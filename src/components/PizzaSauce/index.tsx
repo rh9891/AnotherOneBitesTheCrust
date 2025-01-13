@@ -6,11 +6,11 @@ import SpinachBase from "../../assets/images/SpinachBase.png";
 import BBQBase from "../../assets/images/BBQBase.png";
 import * as Styled from "./Styles";
 
-type PizzaBaseProps = {
+type PizzaSauceProps = {
   sauce: SauceType;
 };
 
-export default function PizzaBase({ sauce }: PizzaBaseProps) {
+export default function PizzaSauce({ sauce }: PizzaSauceProps) {
   const sauceMap: Record<SauceType, { src: string; alt: string }> = {
     "tomato-sauce": { src: TomatoBase, alt: "Tomato Sauce" },
     "romesco-sauce": { src: RomescoBase, alt: "Romesco Sauce" },

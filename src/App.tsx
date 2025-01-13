@@ -6,6 +6,7 @@ import Landing from "./components/Landing";
 import CustomizeSauce from "./components/CustomizeSauce";
 import CustomizeCheese from "./components/CustomizeCheese";
 import CustomizeToppings from "./components/CustomizeToppings";
+import Checkout from "./components/Checkout";
 
 export default function App() {
   const [ingredients, setIngredients] = useState<Ingredients>({
@@ -41,7 +42,7 @@ export default function App() {
             element={<CustomizeToppings ingredients={ingredients} setIngredients={setIngredients} />}
             path="/customize-additional-toppings"
           />
-          <Route element={<h1>Checkout</h1>} path="/checkout"></Route>
+          <Route element={<Checkout ingredients={ingredients} />} path="/checkout"></Route>
         </Routes>
       </Router>
     </div>

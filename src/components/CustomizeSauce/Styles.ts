@@ -8,17 +8,31 @@ export const Wrapper = styled.div`
 
 export const CustomizationContainer = styled.div`
   display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 24px;
+  margin: 32px 16px;
+
+  @media only screen and (max-width: 765px) {
+    flex-direction: column;
+    justify-content: center;
+  }
 `;
 
 export const Container = styled.div`
-  flex: 1;
+  display: flex;
+  min-width: 500px;
+
+   @media only screen and (max-width: 765px) {
+    min-width: 0;
+  }
 `;
 
 export const OptionsContainer = styled.div`
-  flex: 1;
   display: flex;
   flex-direction: column;
   gap: 16px;
+  max-width: 500px;
 `;
 
 export const DirectionContainer = styled.div`
@@ -28,10 +42,13 @@ export const DirectionContainer = styled.div`
 `;
 
 export const Title = styled.div`
-    font-size: 1.25rem;
-`
+  font-family: "Luckiest Guy", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2rem;
+`;
 
-export const Description = styled.div``
+export const Description = styled.div``;
 
 export const Option = styled.div`
   display: flex;

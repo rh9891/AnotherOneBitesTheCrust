@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 import { Ingredients, SauceType } from "../../Types";
 import Header from "../Header";
-import PizzaBase from "../PizzaBase";
+import PizzaSauce from "../PizzaSauce";
 import * as Styled from "./Styles";
 
 type CustomizeSauceProps = {
@@ -48,7 +48,7 @@ export default function CustomizeSauce({
       <Styled.CustomizationContainer>
         <Styled.Container>
           <Styled.ImageContainer>
-            <PizzaBase sauce={sauce} />
+            <PizzaSauce sauce={sauce} />
           </Styled.ImageContainer>
         </Styled.Container>
         <Styled.OptionsContainer>
