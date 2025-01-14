@@ -73,8 +73,11 @@ export const Image = styled.img`
 export const ButtonContainer = styled.div`
   display: flex;
   gap: 16px;
-  align-items: center;
-`;
+ align-items: center;
+
+   @media only screen and (max-width: 765px) {
+    justify-content: center;
+  }`;
 
 export const Button = styled.a`
   position: relative;

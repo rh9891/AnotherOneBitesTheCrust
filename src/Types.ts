@@ -1,20 +1,20 @@
 export type SauceType =
-  | "tomato-sauce"
-  | "romesco-sauce"
-  | "pesto-sauce"
-  | "creamy-spinach-sauce"
-  | "bbq-sauce";
+    | "tomato-sauce"
+    | "romesco-sauce"
+    | "pesto-sauce"
+    | "creamy-spinach-sauce"
+    | "bbq-sauce";
 
 export type CheeseType =
-  | "vegan-cheese"
-  | "ricotta-cheese"
-  | "mozarella-cheese"
-  | "goat-cheese";
+    | "vegan-cheese"
+    | "ricotta-cheese"
+    | "mozzarella-cheese"
+    | "goat-cheese";
 
 export type Ingredients = {
-  sauce: SauceType;
-  cheese: CheeseType;
-  toppings: string[];
+    sauce: SauceType;
+    cheese: CheeseType;
+    toppings: string[];
 };
 
 export const sauceNames: Record<SauceType, string> = {
@@ -23,15 +23,15 @@ export const sauceNames: Record<SauceType, string> = {
     "pesto-sauce": "pesto sauce",
     "creamy-spinach-sauce": "creamy spinach sauce",
     "bbq-sauce": "BBQ sauce",
-  };
-  
+};
+
 export const cheeseNames: Record<CheeseType, string> = {
     "vegan-cheese": "vegan cheese",
     "ricotta-cheese": "ricotta cheese",
-    "mozarella-cheese": "mozzarella cheese",
+    "mozzarella-cheese": "mozzarella cheese",
     "goat-cheese": "goat cheese",
-  };
-  
+};
+
 export const toppingNames: Record<string, string> = {
     pepperoni: "pepperoni",
     chicken: "chicken",
@@ -45,5 +45,5 @@ export const toppingNames: Record<string, string> = {
     onions: "onions",
     pineapple: "pineapple",
     "shredded-parmesan-cheese": "shredded parmesan cheese",
-  };
+};
   
