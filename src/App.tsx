@@ -2,11 +2,11 @@ import { useEffect, useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 import { Ingredients, LOCAL_STORAGE_KEY } from "./Types";
-import Landing from "./components/Landing";
-import CustomizeSauce from "./components/CustomizeSauce";
-import CustomizeCheese from "./components/CustomizeCheese";
-import CustomizeToppings from "./components/CustomizeToppings";
-import Checkout from "./components/Checkout";
+import Landing from "./pages/Landing";
+import CustomizeSauce from "./pages/CustomizeSauce";
+import CustomizeCheese from "./pages/CustomizeCheese";
+import CustomizeToppings from "./pages/CustomizeToppings";
+import Checkout from "./pages/Checkout";
 
 export default function App() {
   const [ingredients, setIngredients] = useState<Ingredients>(() => {
@@ -51,8 +51,9 @@ export default function App() {
             element={<CustomizeToppings ingredients={ingredients} setIngredients={setIngredients} />}
             path="/customize-additional-toppings"
           />
-          <Route element={<Checkout ingredients={ingredients} setIngredients={setIngredients} />}
-                 path="/checkout"></Route>
+          <Route
+            element={<Checkout ingredients={ingredients} setIngredients={setIngredients} />}
+            path="/checkout"></Route>
         </Routes>
       </Router>
     </div>

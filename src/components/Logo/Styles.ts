@@ -7,6 +7,7 @@ export const Wrapper = styled.div`
     height: 36px;
     width: 36px;
     position: relative;
+    cursor: pointer;
 
     @keyframes ripple {
         from {

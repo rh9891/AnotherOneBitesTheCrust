@@ -77,10 +77,10 @@ export const Button = styled.a`
         width: 100%;
         height: 2px;
         background: linear-gradient(90deg, transparent, #6EE0E0);
-        animation: animate1 1s linear infinite;
+        animation: animate-a 1s linear infinite;
     }
 
-    @keyframes animate1 {
+    @keyframes animate-a {
         0% {
             left: -100%;
         }
@@ -96,11 +96,11 @@ export const Button = styled.a`
         width: 2px;
         height: 100%;
         background: linear-gradient(180deg, transparent, #6EE0E0);
-        animation: animate2 1s linear infinite;
+        animation: animate-b 1s linear infinite;
         animation-delay: 0.25s;
     }
 
-    @keyframes animate2 {
+    @keyframes animate-b {
         0% {
             top: -100%;
         }
@@ -116,11 +116,11 @@ export const Button = styled.a`
         width: 100%;
         height: 2px;
         background: linear-gradient(270deg, transparent, #6EE0E0);
-        animation: animate3 1s linear infinite;
+        animation: animate-c 1s linear infinite;
         animation-delay: 0.5s;
     }
 
-    @keyframes animate3 {
+    @keyframes animate-c {
         0% {
             right: -100%;
         }
@@ -136,11 +136,11 @@ export const Button = styled.a`
         width: 2px;
         height: 100%;
         background: linear-gradient(360deg, transparent, #6EE0E0);
-        animation: animate4 1s linear infinite;
+        animation: animate-d 1s linear infinite;
         animation-delay: 0.75s;
     }
 
-    @keyframes animate4 {
+    @keyframes animate-d {
         0% {
             bottom: -100%;
         }

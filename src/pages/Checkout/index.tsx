@@ -2,7 +2,7 @@ import { Dispatch, SetStateAction, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import { cheeseNames, Ingredients, LOCAL_STORAGE_KEY, sauceNames, toppingNames } from "../../Types";
-import Header from "../Header";
+import Header from "../../components/Header";
 import DrinkingPizza from "../../assets/images/DrinkingPizza.png";
 import * as Styled from "./Styles";
 
@@ -18,7 +18,6 @@ export default function Checkout({ ingredients, setIngredients }: CheckoutProps)
   const cheeseName = cheeseNames[cheese];
   const toppingNamesList = toppings.map((topping) => toppingNames[topping]);
   const additionalToppings = toppingNamesList.length > 0;
-
   const [completeOrder, setCompleteOrder] = useState<boolean>(false);
 
   const handleGoBack = () => {
@@ -65,18 +64,20 @@ export default function Checkout({ ingredients, setIngredients }: CheckoutProps)
                     Before we hit the stage with your custom creation, let’s make sure every topping is in tune and your
                     cheese choice hits all the right notes. Here's your pizza lineup so far:
                   </Styled.OrderDetailDescription>
-                  {additionalToppings && (
-                    <ul>
-                      <li>Sauce: {sauceName}</li>
-                      <li>Cheese: {cheeseName}</li>
+                  <ul>
+                    <li>Sauce: {sauceName}</li>
+                    <li>Cheese: {cheeseName}</li>
+                    {additionalToppings && <>
                       <li>Toppings:</li>
                       <ul>
                         {toppingNamesList.map((topping) => (
                           <li key={topping}>{topping}</li>
                         ))}
                       </ul>
-                    </ul>
-                  )}</>}
+                    </>
+                    }
+                  </ul>
+                </>}
             </Styled.OrderDetails>
             <Styled.ButtonContainer>
               {completeOrder ?

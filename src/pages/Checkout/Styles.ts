@@ -20,7 +20,7 @@ export const CardWrapper = styled.section`
 export const Card = styled.div`
     display: grid;
     grid-template-columns: 1fr;
-    border: 1px solid #e1e1e1;
+    border: 1px solid #FFFFFF;
     border-radius: 15px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
     max-width: 600px;

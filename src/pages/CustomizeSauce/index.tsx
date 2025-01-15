@@ -2,8 +2,8 @@ import { Dispatch, SetStateAction } from "react";
 import { useNavigate } from "react-router-dom";
 
 import { Ingredients, SauceType } from "../../Types";
-import Header from "../Header";
-import PizzaSauce from "../PizzaSauce";
+import Header from "../../components/Header";
+import PizzaSauce from "../../components/PizzaSauce";
 import * as Styled from "./Styles";
 
 type CustomizeSauceProps = {
@@ -29,7 +29,6 @@ export default function CustomizeSauce({
                                          setIngredients
                                        }: CustomizeSauceProps) {
   const navigate = useNavigate();
-
   const handleSauceChange = (sauce: SauceType) => {
     setIngredients((prev: Ingredients) => ({ ...prev, sauce: sauce }));
   };

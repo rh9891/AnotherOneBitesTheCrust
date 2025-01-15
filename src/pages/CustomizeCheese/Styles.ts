@@ -3,7 +3,8 @@ import styled from "styled-components";
 export const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
-    width: 100%;
+    height: 100vh;
+    width: 100vw;
 `;
 
 export const CustomizationContainer = styled.div`
@@ -11,7 +12,6 @@ export const CustomizationContainer = styled.div`
     align-items: center;
     justify-content: space-around;
     gap: 24px;
-    margin: 0 16px;
     height: 100vh;
     width: 100vw;
 
@@ -60,11 +60,10 @@ export const ImageContainer = styled.div`
     .ingredients {
         position: absolute;
     }
-`;
 
-export const Image = styled.img`
-    height: 100%;
-    width: 100%;
+    @media only screen and (max-width: 765px) {
+        max-width: 375px;
+    }
 `;
 
 export const OptionsContainer = styled.div`

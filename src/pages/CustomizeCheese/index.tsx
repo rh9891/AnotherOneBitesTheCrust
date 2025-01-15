@@ -2,9 +2,9 @@ import { Dispatch, SetStateAction } from "react";
 import { useNavigate } from "react-router-dom";
 
 import { CheeseType, Ingredients } from "../../Types";
-import Header from "../Header";
-import PizzaSauce from "../PizzaSauce";
-import PizzaCheese from "../PizzaCheese";
+import Header from "../../components/Header";
+import PizzaSauce from "../../components/PizzaSauce";
+import PizzaCheese from "../../components/PizzaCheese";
 import * as Styled from "./Styles";
 
 type CustomizeCheeseProps = {
