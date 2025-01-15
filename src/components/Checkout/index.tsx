@@ -48,7 +48,7 @@ export default function Checkout({ ingredients, setIngredients }: CheckoutProps)
       <Styled.CardWrapper>
         <Styled.Card>
           <Styled.Image
-            completeOrder={completeOrder}
+            $completeOrder={completeOrder}
             src={DrinkingPizza}
             alt="Pizza Drinking Soda"
           />

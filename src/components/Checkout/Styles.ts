@@ -32,12 +32,12 @@ export const Card = styled.div`
     }
 `;
 
-export const Image = styled.img<{ completeOrder: boolean }>`
+export const Image = styled.img<{ $completeOrder: boolean }>`
     height: 100%;
     width: 100%;
     object-fit: contain;
-    background-color: ${({ completeOrder }) =>
-            completeOrder ? "#B9A3D1" : "#6EE0E0"};`;
+    background-color: ${({ $completeOrder }) =>
+            $completeOrder ? "#B9A3D1" : "#6EE0E0"};`;
 
 export const DetailsWrapper = styled.div`
     display: flex;
