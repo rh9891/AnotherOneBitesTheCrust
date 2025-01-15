@@ -56,7 +56,7 @@ THEN my customized pizza is finalized and sent to the kitchen.
 
 The following animation demonstrates the complete application functionality:
 
-![AnotherOneBitesTheCrustPreview](https://github.com/user-attachments/assets/3a864b30-5d6b-4ef2-a084-65febc14d8fd)
+![AnotherOneBitesTheCrustPreview](https://github.com/user-attachments/assets/c6effe4b-fa9b-48c7-8e53-d47e8f8864b5)
 
 ## Links
 
