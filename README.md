@@ -45,17 +45,17 @@ THEN my customized pizza is finalized and sent to the kitchen.
 
 ## Preview of Another One Bites the Crust
 
-![Another One Bites the Crust Homepage]()
+![Another One Bites the Crust Homepage](https://github.com/user-attachments/assets/6a0c4b75-94a0-4c6f-ba19-9a63a7d93e73)
 
 The following animation demonstrates the complete application functionality:
 
-![Another One Bites the Crust Preview]()
+![Another One Bites the Crust Preview](https://github.com/user-attachments/assets/bd7980aa-25d7-4375-8231-6f7c4dcc0bee)
 
 ## Links
 
-1. [Deployed Application]()
+1. [Deployed Application](https://another-one-bites-the-crust.netlify.app)
 
-2. [Github Repository]()
+2. [Github Repository](https://github.com/rh9891/AnotherOneBitesTheCrust)
 
 ## Quick Start
 
