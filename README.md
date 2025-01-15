@@ -9,35 +9,38 @@
 - [Features of the Application](#features-of-the-application)
 - [Preview of Another One Bites the Crust](#preview-of-another-one-bites-the-crust)
 - [Links](#links)
-- [Usage](#usage)
+- [Quick Start](#quick-start)
 - [Built Using](#built-using)
 - [License](#license)
 
 ## Description
 
-Another One Bites the Crust is an 80's-themed musically punny pizza making application that allows the user to create a
-pizza of their choice by selecting and submitting its ingredients. As the user creates their pizza, it will be displayed
-onto the page. The 80's could arguably be labeled as THE best decade for music, so the inspirations for punny pizza
-names (based on music titles) are endless!
+Another One Bites the Crust is an 80’s-themed, music-punny pizza-making application that lets users design the pizza of
+their dreams. From selecting ingredients to reviewing their pizza masterpiece, users can order pizzas with style.
+
+Inspired by the greatest hits of the 80’s, every topping is a nod to the music that defined the decade. Get ready to
+rock your taste buds and groove to the sounds of culinary creativity.
 
 ## User Story
 
 ```
-AS A user
-I WANT to be able to use a restaurant application
-SO THAT I can create, "devour" (update), and order pizzas.
+AS A music-loving user
+I WANT to use a fun restaurant application
+SO THAT I can create, review, and order my perfect pizza with a side of 80's nostalgia.
 ```
 
 ## Features of the Application
 
 ```
-GIVEN a restaurant application that allows the user to select the ingredients of the pizza that they would like to eat
-WHEN I select an ingredient
-THEN the application will display the chosen ingredients on the left side of the page.
-WHEN I click on the "order" button
-THEN I will have the selected ingredients displayed so that I can verify my choices.
-WHEN I click on the "back" button of my order
-THEN I can review the details of my order.
+GIVEN a pizza-making application with an 80’s twist
+WHEN I select a topping
+THEN it appears on my virtual pizza, styled in real time.
+WHEN I navigate to the order summary page
+THEN I can review all the ingredients I've selected before finalizing.
+WHEN I use the back button on the order page
+THEN I can return to the customization step and make changes.
+WHEN I submit my order
+THEN my customized pizza is finalized and sent to the kitchen.
 ```
 
 ## Preview of Another One Bites the Crust
@@ -56,7 +59,11 @@ The following animation demonstrates the complete application functionality:
 
 ## Quick Start
 
-You can run the application using the following command:
+Run the application locally with these steps:
+
+```
+$ npm install
+```
 
 ```
 $ npm run dev
@@ -64,7 +71,7 @@ $ npm run dev
 
 ## Built Using
 
-Listed below are the frameworks and guides that made building this pizza application possible:
+This tubular app came to life thanks to:
 
 - [React](https://reactjs.org/)
 - [Vite](https://vitejs.dev/)
@@ -74,8 +81,8 @@ Listed below are the frameworks and guides that made building this pizza applica
 
 ## License
 
-This application does not currently have any licenses.
+This application does not currently have any licenses, but you're more than welcome to use it as inspiration or adapt it
+for your own projects.
 
-The user is not permitted to use, modify, or share any parts of it. Though the code for this application is hosted on
-Github, where you are allowed to view and fork the code, this does not imply that the user is permitted to use, modify,
-or share the contents of this application for any purpose.
+Feel free to view, fork, and modify the code, but please give credit to this repository if you decide to use any part of
+it. Let’s spread some 80’s pizza-making joy together!
