@@ -31,13 +31,15 @@ export default function Checkout({ ingredients, setIngredients }: CheckoutProps)
   };
 
   const handleNewOrder = () => {
-    navigate("/customize-sauce");
-    setCompleteOrder(false);
-    setIngredients({
+    const defaultIngredients: Ingredients = {
       sauce: "tomato-sauce",
       cheese: "vegan-cheese",
       toppings: []
-    });
+    };
+    setIngredients(defaultIngredients);
+    localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(defaultIngredients));
+    navigate("/customize-sauce");
+    setCompleteOrder(false);
   };
 
   return (

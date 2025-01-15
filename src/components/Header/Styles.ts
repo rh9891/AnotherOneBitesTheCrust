@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-    padding: 10px 50px;
+    padding: 16px;
     background: #B9A3D1;
     display: flex;
-    gap: 8px;
+    gap: 24px;
     align-items: flex-end;
 `;
 

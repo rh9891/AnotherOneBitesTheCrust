@@ -15,7 +15,7 @@ export default function App() {
       ? JSON.parse(savedOrder)
       : {
         sauce: "tomato-sauce",
-        cheese: "mozzarella-cheese",
+        cheese: "vegan-cheese",
         toppings: []
       };
   });
