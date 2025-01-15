@@ -1,6 +1,10 @@
 # Another One Bites the Crust
 
-[![NPM Version Badge](https://badge.fury.io/js/%40angular%2Fcore.svg)](https://badge.fury.io/js/%40angular%2Fcore)
+[![React](https://img.shields.io/badge/React-18.2.0-blue.svg)](https://reactjs.org/)
+[![Vite](https://img.shields.io/badge/Vite-4.0.0-yellow.svg)](https://vitejs.dev/)
+[![Framer Motion](https://img.shields.io/badge/Framer%20Motion-10.12.16-purple.svg)](https://www.framer.com/motion/)
+[![Styled Components](https://img.shields.io/badge/Styled%20Components-5.3.6-pink.svg)](https://styled-components.com/)
+[![React Router](https://img.shields.io/badge/React%20Router-6.4.3-red.svg)](https://reactrouter.com/)
 
 ## Table of Contents
 
@@ -35,10 +39,13 @@ SO THAT I can create, review, and order my perfect pizza with a side of 80's nos
 GIVEN a pizza-making application with an 80’s twist
 WHEN I select a topping
 THEN it appears on my virtual pizza, styled in real time.
+
 WHEN I navigate to the order summary page
 THEN I can review all the ingredients I've selected before finalizing.
+
 WHEN I use the back button on the order page
 THEN I can return to the customization step and make changes.
+
 WHEN I submit my order
 THEN my customized pizza is finalized and sent to the kitchen.
 ```
@@ -49,7 +56,7 @@ THEN my customized pizza is finalized and sent to the kitchen.
 
 The following animation demonstrates the complete application functionality:
 
-![Another One Bites the Crust Preview](https://github.com/user-attachments/assets/bd7980aa-25d7-4375-8231-6f7c4dcc0bee)
+![AnotherOneBitesTheCrustPreview](https://github.com/user-attachments/assets/3a864b30-5d6b-4ef2-a084-65febc14d8fd)
 
 ## Links
 
@@ -81,8 +88,6 @@ This tubular app came to life thanks to:
 
 ## License
 
-This application does not currently have any licenses, but you're more than welcome to use it as inspiration or adapt it
-for your own projects.
-
-Feel free to view, fork, and modify the code, but please give credit to this repository if you decide to use any part of
-it. Let’s spread some 80’s pizza-making joy together!
+Another One Bites the Crust does not currently have any licenses, but you're more than welcome to use it as inspiration or adapt it
+for your own projects. Feel free to view, fork, and modify the code, but please give credit to this repository if you decide to use any part of
+it.
