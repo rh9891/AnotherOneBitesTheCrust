@@ -10,15 +10,15 @@
 - [Preview of Another One Bites the Crust](#preview-of-another-one-bites-the-crust)
 - [Links](#links)
 - [Usage](#usage)
-- [Acknowledgments](#acknowledgments)
 - [Built Using](#built-using)
 - [License](#license)
-- [Contributing](#contributing)
-- [Questions](#questions)
 
 ## Description
 
-Another One Bites the Crust is an 80's-themed musically punny pizza making application that allows the user to create a pizza of their choice by selecting and submitting its ingredients. As the user creates their pizza, it will be displayed onto the page. The 80's could arguably be labeled as THE best decade for music, so the inspirations for punny pizza names (based on music titles) are endless!
+Another One Bites the Crust is an 80's-themed musically punny pizza making application that allows the user to create a
+pizza of their choice by selecting and submitting its ingredients. As the user creates their pizza, it will be displayed
+onto the page. The 80's could arguably be labeled as THE best decade for music, so the inspirations for punny pizza
+names (based on music titles) are endless!
 
 ## User Story
 
@@ -54,37 +54,28 @@ The following animation demonstrates the complete application functionality:
 
 2. [Github Repository]()
 
-## Usage
+## Quick Start
 
-An example of usage when testing the application using Nodemon as it updates the webpage after every change it detects:
+You can run the application using the following command:
 
 ```
 $ npm run dev
 ```
 
-## Acknowledgments
-
-A heartfelt thanks to Github user, David Cox, whose helpful video tutorial I looked to for guidance whenever I found myself stuck, especially when building the structure of the ORM variable and creating the routes - the right way! - for the POST and DELETE routes.
-
 ## Built Using
 
 Listed below are the frameworks and guides that made building this pizza application possible:
 
-- [Bulma](https://bulma.io/documentation/)
-- [Handlebars](https://handlebarsjs.com/guide/#what-is-handlebars)
-- [Express Routing](https://expressjs.com/en/guide/routing.html)
-- [Model View Controllers (MVC)](https://www.geeksforgeeks.org/mvc-design-pattern/)
+- [React](https://reactjs.org/)
+- [Vite](https://vitejs.dev/)
+- [Framer Motion](https://www.framer.com/motion/)
+- [Styled Components](https://styled-components.com/)
+- [React Router](https://reactrouter.com/en/main)
 
 ## License
 
 This application does not currently have any licenses.
 
-The user is not permitted to use, modify, or share any parts of it. Though the code for this application is hosted on Github, where you are allowed to view and fork the code, this does not imply that the user is permitted to use, modify, or share the contents of this application for any purpose.
-
-## Contributing
-
-If you would like to contribute to this repository, please contact me via [Github](https://github.com/rh9891).
-
-## Questions
-
-If you have any questions, comments, or issues regarding this command line interface application, please do not hesitate to contact me through [Github](https://github.com/rh9891).
+The user is not permitted to use, modify, or share any parts of it. Though the code for this application is hosted on
+Github, where you are allowed to view and fork the code, this does not imply that the user is permitted to use, modify,
+or share the contents of this application for any purpose.
