@@ -9,7 +9,7 @@ export const Wrapper = styled.div`
 `;
 
 export const Content = styled.div`
-    color: white;
+    color: #FFFFFF;
     font-family: "Luckiest Guy", serif;
     font-weight: 400;
     font-style: normal;
