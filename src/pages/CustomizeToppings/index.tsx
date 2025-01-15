@@ -60,8 +60,7 @@ const toppings: Topping[] = [
   {
     id: "pineapple",
     label: "Pineapple Fields Forever",
-    image: Pineapple,
-    className: "pineapple"
+    image: Pineapple
   },
   {
     id: "shredded-parmesan-cheese",
