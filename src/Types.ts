@@ -46,4 +46,5 @@ export const toppingNames: Record<string, string> = {
     pineapple: "pineapple",
     "shredded-parmesan-cheese": "shredded parmesan cheese",
 };
-  
+
+export const LOCAL_STORAGE_KEY = "pizzaOrder";
