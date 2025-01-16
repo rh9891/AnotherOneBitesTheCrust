@@ -5,6 +5,7 @@
 [![Framer Motion](https://img.shields.io/badge/Framer%20Motion-10.12.16-purple.svg)](https://www.framer.com/motion/)
 [![Styled Components](https://img.shields.io/badge/Styled%20Components-5.3.6-pink.svg)](https://styled-components.com/)
 [![React Router](https://img.shields.io/badge/React%20Router-6.4.3-red.svg)](https://reactrouter.com/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Table of Contents
 
@@ -19,8 +20,9 @@
 
 ## Description
 
-Another One Bites the Crust is an 80’s-themed, music-punny pizza-making application that lets users design the pizza of
-their dreams. From selecting ingredients to reviewing their pizza masterpiece, users can order pizzas with style.
+Another One Bites the Crust is an 80’s-themed, music-inspired and pun-filled pizza-making application that lets users
+design the pizza of their dreams. From selecting ingredients to reviewing their pizza masterpiece, users can order
+pizzas with style.
 
 Inspired by the greatest hits of the 80’s, every topping is a nod to the music that defined the decade. Get ready to
 rock your taste buds and groove to the sounds of culinary creativity.
@@ -88,6 +90,19 @@ This tubular app came to life thanks to:
 
 ## License
 
-Another One Bites the Crust does not currently have any licenses, but you're more than welcome to use it as inspiration or adapt it
-for your own projects. Feel free to view, fork, and modify the code, but please give credit to this repository if you decide to use any part of
-it.
+The MIT License (MIT)
+
+Copyright (c) 2025 Romie Hecdivert
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated
+documentation files (the "Software"), to deal in the Software without restriction, including without limitation the
+rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit
+persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the
+Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
+WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
