@@ -1,5 +1,8 @@
 {
   "name": "another-one-bites-the-crust",
+  "license": "MIT",
+  "repository": "https://github.com/rh9891/AnotherOneBitesTheCrust",
+  "author": "Romie Hecdivert",
   "private": true,
   "version": "0.0.0",
   "type": "module",
